@@ -18,7 +18,7 @@ const InputList= props =>(
                             })
                         }
                     </Col>
-                    <Col  md={6}>    
+                    <Col md={6}>    
                         {
                             props.getList(props.listName).map(el=>{
                                 if(el.index==="2"){

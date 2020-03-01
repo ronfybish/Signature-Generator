@@ -5,11 +5,11 @@ export default class AppNavBar extends Component {
     render() {
         return (
         <div>
-            <Navbar color="light" className=" mb-3" light>
-              <NavbarBrand href="/" className="mx-auto">
+            <Navbar color="light" className="mb-3" light>
+              <NavbarBrand href="/" >
                       <img alt="logo-img" src={require('../img/logo.png')} />
               </NavbarBrand>
-              <NavbarToggler onClick={this.props.toggle} className="mr-2" />
+              <NavbarToggler onClick={this.props.toggle}  />
               <Collapse isOpen={this.props.isOpen} navbar>
                 <Nav className="text-center" navbar>
                   <NavItem>
