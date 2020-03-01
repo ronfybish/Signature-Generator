@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Form, FormGroup, Label, Input, FormText, Row, Col, Collapse, Container, Button, ButtonGroup } from 'reactstrap';
+import AppInputList from './AppInputList'
+import {  Collapse, Container, Button, ButtonGroup, Card, CardBody } from 'reactstrap';
 
 export default class AppCollapseNavBar extends Component {
     constructor(props){
@@ -21,6 +22,7 @@ export default class AppCollapseNavBar extends Component {
 
 
     render() {
+        const whosOpen = this.state.openTab.find(el=>el.isOpen===true);
         return (
             <div>
                 <ButtonGroup className="d-flex">
@@ -30,41 +32,33 @@ export default class AppCollapseNavBar extends Component {
                     <Button className={this.state.openTab[3].isActive} outline color="primary" onClick={() => this.toggleTab("style")} >style</Button>
                 </ButtonGroup>
                 <Collapse isOpen={this.state.openTab[0].isOpen}>
-                    <Container className="my-4">
-                        <Form>
-                            <Row form>
-                                <Col md={6}>
-                                <FormGroup>
-                                    <Label for="exampleEmail">Email</Label>
-                                    <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
-                                </FormGroup>
-                                </Col>
-                                <Col md={6}>
-                                <FormGroup>
-                                    <Label for="examplePassword">Password</Label>
-                                    <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
-                                </FormGroup>
-                                </Col>
-                            </Row>
-                        </Form>   
-                    </Container>    
+                    <Card>
+                        <CardBody className="my-3 py-5">
+                            <AppInputList change={this.props.change} listName={whosOpen.name} getList={this.props.getList}/>
+                        </CardBody>
+                    </Card>
                 </Collapse>
                 <Collapse isOpen={this.state.openTab[1].isOpen}>
-                    
-                            Social
-                       
+                    <Card>
+                        <CardBody className="my-3 py-5">
+                            <AppInputList change={this.props.change} listName={whosOpen.name} getList={this.props.getList}/>
+                        </CardBody>
+                    </Card>
                 </Collapse>
                 <Collapse isOpen={this.state.openTab[2].isOpen}>
-                   
-                            images
-                    
+                    <Card>
+                        <CardBody className="my-3 py-5">
+                            <AppInputList change={this.props.change} listName={whosOpen.name} getList={this.props.getList}/>
+                        </CardBody>
+                    </Card>
                 </Collapse>
                 <Collapse isOpen={this.state.openTab[3].isOpen}>
-                   
-                            style
-                     
+                    <Card>
+                        <CardBody className="my-3 py-5">
+                            <AppInputList change={this.props.change} listName={whosOpen.name} getList={this.props.getList}/>
+                        </CardBody>
+                    </Card>
                 </Collapse>
-                
             </div>
         )
     }
