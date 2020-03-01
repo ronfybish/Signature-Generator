@@ -1,13 +1,11 @@
 .App{
   background-image: url('./img/cover.png');
   font-family: sans-serif;
-}
-
-.col-right{
-  border: 1px solid black;
 
 }
+
 .col-left{
   border: 1px solid black;
-  
+  height: 500px;
 }
+

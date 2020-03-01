@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import AppInputList from './AppInputList'
-import {  Collapse, Container, Button, ButtonGroup, Card, CardBody } from 'reactstrap';
+import {  Collapse, Button, ButtonGroup, Card, CardBody } from 'reactstrap';
+
 
 export default class AppCollapseNavBar extends Component {
     constructor(props){
@@ -23,42 +24,26 @@ export default class AppCollapseNavBar extends Component {
 
     render() {
         const whosOpen = this.state.openTab.find(el=>el.isOpen===true);
+        const content=this.state.openTab[0].isActive
+        const social=this.state.openTab[1].isActive
+        const images=this.state.openTab[2].isActive
+        const style=this.state.openTab[3].isActive
+        
         return (
             <div>
-                <ButtonGroup className="d-flex">
-                    <Button outline className={this.state.openTab[0].isActive} color="primary" onClick={() => this.toggleTab("content")}>content</Button>
-                    <Button outline className={this.state.openTab[1].isActive} color="primary" onClick={() => this.toggleTab("social")}>social</Button>
-                    <Button outline className={this.state.openTab[2].isActive} color="primary" onClick={() => this.toggleTab("images")}>images</Button>
-                    <Button className={this.state.openTab[3].isActive} outline color="primary" onClick={() => this.toggleTab("style")} >style</Button>
+                <Card className="bg-white ">
+                <ButtonGroup className="p-3">
+                    <Button className={content!==""?"active text-white rounded-pill":"rounded-pill"} color="light" style={content!==""?{background:"#8214B6"}:null}   onClick={() => this.toggleTab("content")}>content</Button>
+                    <Button className={social!==""?"active text-white rounded-pill":"rounded-pill"} color="light"  style={social!==""?{background:"#8214B6"}:null}  onClick={() => this.toggleTab("social")}>social</Button>
+                    <Button className={images!==""?"active text-white rounded-pill":"rounded-pill"} color="light"  style={images!==""?{background:"#8214B6"}:null}  onClick={() => this.toggleTab("images")}>images</Button>
+                    <Button className={style!==""?"active text-white rounded-pill":"rounded-pill"} color="light"  style={style!==""?{background:"#8214B6"}:null}  onClick={() => this.toggleTab("style")} >style</Button>
                 </ButtonGroup>
-                <Collapse isOpen={this.state.openTab[0].isOpen}>
-                    <Card>
-                        <CardBody className="my-3 py-5">
+                <Collapse isOpen={whosOpen.isOpen}>
+                        <CardBody className="py-3">
                             <AppInputList change={this.props.change} listName={whosOpen.name} getList={this.props.getList}/>
                         </CardBody>
-                    </Card>
                 </Collapse>
-                <Collapse isOpen={this.state.openTab[1].isOpen}>
-                    <Card>
-                        <CardBody className="my-3 py-5">
-                            <AppInputList change={this.props.change} listName={whosOpen.name} getList={this.props.getList}/>
-                        </CardBody>
-                    </Card>
-                </Collapse>
-                <Collapse isOpen={this.state.openTab[2].isOpen}>
-                    <Card>
-                        <CardBody className="my-3 py-5">
-                            <AppInputList change={this.props.change} listName={whosOpen.name} getList={this.props.getList}/>
-                        </CardBody>
-                    </Card>
-                </Collapse>
-                <Collapse isOpen={this.state.openTab[3].isOpen}>
-                    <Card>
-                        <CardBody className="my-3 py-5">
-                            <AppInputList change={this.props.change} listName={whosOpen.name} getList={this.props.getList}/>
-                        </CardBody>
-                    </Card>
-                </Collapse>
+                </Card>
             </div>
         )
     }

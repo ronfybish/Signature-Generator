@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink ,Container} from 'reactstrap';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 
 export default class AppNavBar extends Component {    
     render() {
@@ -7,11 +7,11 @@ export default class AppNavBar extends Component {
         <div>
             <Navbar color="light" className=" mb-3" light>
               <NavbarBrand href="/" className="mx-auto">
-                      <img src={require('../img/logo.png')} />
+                      <img alt="logo-img" src={require('../img/logo.png')} />
               </NavbarBrand>
               <NavbarToggler onClick={this.props.toggle} className="mr-2" />
               <Collapse isOpen={this.props.isOpen} navbar>
-                <Nav navbar>
+                <Nav className="text-center" navbar>
                   <NavItem>
                     <NavLink href="/components/">Components</NavLink>
                   </NavItem>
