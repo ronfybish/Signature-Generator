@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink ,Container} from 'reactstrap';
 
 export default class AppNavBar extends Component {    
     render() {
         return (
         <div>
             <Navbar color="light" className=" mb-3" light>
-              <NavbarBrand href="/" className="mr-auto">
+              <NavbarBrand href="/" className="mx-auto">
                       <img src={require('../img/logo.png')} />
               </NavbarBrand>
               <NavbarToggler onClick={this.props.toggle} className="mr-2" />
