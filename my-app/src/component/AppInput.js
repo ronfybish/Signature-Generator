@@ -7,13 +7,13 @@ const AppInput= props =>(
         {
         props.type==="file"?
             <div className="custom-file p-4">
-                <Input type="file" id="myfile" className="custom-file-input"></Input>
+                <Input onChange={(event)=>props.change(event,props.id,props.listName)} type="file" id="myfile" className="custom-file-input"></Input>
                 <Label className="custom-file-label  border-primary" for="myfile">{props.id} Img</Label>
             </div>
             :
             <FormGroup className="mr-2">
                 <Label for={props.id}>{props.id} :</Label>
-                <Input style={{borderRadius:"12px",background:"#F5F2F5"}}  type={props.type} value={props.userInput}  id={props.id} onChange={(event)=>props.change(event,props.id,props.listName)} className={props.type==="range"?"custom-range":null} />
+                <Input style={{borderRadius:"12px",background:"#F5F2F5"}}  type={props.type} value={props.userInput} min={props.min} max={props.max} id={props.id} onChange={(event)=>props.change(event,props.id,props.listName)} className={props.type==="range"?"custom-range":null} />
             </FormGroup>
         }
     </div>
