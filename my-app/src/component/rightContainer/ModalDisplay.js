@@ -1,14 +1,17 @@
 import React from 'react';
+import ModalSignature from './ModalSignature'
+import SignatureDisplay from './SignatureDisplay'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Input,  } from 'reactstrap';
 
 
-const SignatureModal= props =>(
+const ModalDisplay= props =>(
     <div className="text-center">
         <Button style={{background:"#8214B6"}} className="px-5 rounded-pill" onClick={props.toggle}>Generate Signature</Button>
             <Modal isOpen={props.isOpen} toggle={props.toggle} >
                 <ModalHeader toggle={props.toggle} >Modal title</ModalHeader>
                     <ModalBody>
-                            <Input type="textarea" placeholder="Write something...." rows={5} />
+                            <ModalSignature list={props.list}/>
+                            {/* <SignatureDisplay list={props.list} /> */}
                     </ModalBody>
                     <ModalFooter>
                         <Button color="primary" >Do Something</Button>{' '}
@@ -18,4 +21,4 @@ const SignatureModal= props =>(
     </div>
 )
 
-export default SignatureModal;
+export default ModalDisplay;

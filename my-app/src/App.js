@@ -12,11 +12,12 @@ class App extends Component {
 
     this.state={
       content:[{index:"1",id:'Full Name',type:"text",userInput:'',min:"20",max:"40"},{index:"2",id:'Role',type:"text",userInput:'',min:"20",max:"40"},{index:"1",id:'Email',type:"text",userInput:'',min:"20",max:"40"},{index:"2",id:'Phone',type:"text",userInput:'',min:"0",max:"0"},{index:"1",id:'Address',type:"text",userInput:'',min:"0",max:"0"},{index:"2",id:'Website',type:"text",userInput:'',min:"0",max:"0"}],
-      social:[{index:"1",id:'FaceBook',userInput:'',type:"text",min:"20",max:"40",icon:'facebook.png'},{index:"2",id:'Instagram',type:"text",userInput:'',min:"20",max:"40",icon:'instagram.png'},{index:"1",id:'Twitter',type:"text",userInput:'',min:"20",max:"40",icon:'twitter.png'},{index:"2",id:'Linkedin',type:"text",userInput:'',min:"20",max:"40",icon:'linkedin.png'}],
-      images:[{index:"1",id:"Logo",type:'file',userInput:'',min:"50",max:"75"},{index:"2",id:"Profile",type:'file',userInput:'',min:"50",max:"75"}],
-      style:[{index:"1",id:"Background Color",userInput:'',type:'color',min:"20",max:"40"},{index:"1",id:"Text Color",userInput:'',type:'color',min:"20",max:"40"},{index:"2",id:"Background Rounding",userInput:'0',type:'range',min:"0",max:"40"},{index:"2",id:"Row Spacing",userInput:'2',type:'range',min:"2",max:"5"},{index:"1",id:"Logo Size",userInput:'70',type:'range',min:"70",max:"100"},{index:"2",id:"Logo Image Rounding",userInput:'0',type:'range',min:"20",max:"40"},{index:"1",id:"Profile Image Size",userInput:'58',type:'range',min:"58",max:"75"},{index:"2",id:"Profile Image Rounding",userInput:'0',type:'range',min:"0",max:"40"},{index:"1",id:"Social Size",userInput:'20',type:'range',min:"20",max:"24"},{index:"2",id:"Social Rounding",userInput:'0',type:'range',min:"0",max:"30"}],
+      social:[{index:"1",id:'FaceBook',userInput:'',type:"text",min:"10",max:"30",icon:'facebook.png'},{index:"2",id:'Instagram',type:"text",userInput:'',min:"10",max:"30",icon:'instagram.png'},{index:"1",id:'Twitter',type:"text",userInput:'',min:"10",max:"30",icon:'twitter.png'},{index:"2",id:'Linkedin',type:"text",userInput:'',min:"10",max:"30",icon:'linkedin.png'}],
+      images:[{index:"1",id:"Logo",type:'file',userInput:'',min:"35",max:"60"},{index:"2",id:"Profile",type:'file',userInput:'',min:"35",max:"60"}],
+      style:[{index:"1",id:"Background Color",userInput:'',type:'color',min:"20",max:"40"},{index:"1",id:"Text Color",userInput:'',type:'color',min:"20",max:"40"},{index:"2",id:"Background Rounding",userInput:'0',type:'range',min:"0",max:"40"},{index:"2",id:"Row Spacing",userInput:'2',type:'range',min:"2",max:"5"},{index:"1",id:"Logo Size",userInput:'50',type:'range',min:"50",max:"65"},{index:"2",id:"Logo Image Rounding",userInput:'0',type:'range',min:"20",max:"40"},{index:"1",id:"Profile Image Size",userInput:'45',type:'range',min:"58",max:"60"},{index:"2",id:"Profile Image Rounding",userInput:'0',type:'range',min:"0",max:"40"},{index:"1",id:"Social Size",userInput:'10',type:'range',min:"10",max:"14"},{index:"2",id:"Social Rounding",userInput:'0',type:'range',min:"0",max:"30"}],
       isOpenNavBar:false,
       isOpenModal:false,
+      textToCopy:""
     }
     this.toggleNavBar=this.toggleNavBar.bind(this)
     this.toggleModal=this.toggleModal.bind(this)
@@ -64,11 +65,11 @@ class App extends Component {
         <AppHeading></AppHeading>
         <Container>
           <Row>
-            <Col md={6} className="mb-2 ">
+            <Col md={6} className="mb-2">
                 <AppCollapseNavBar change={this.handleInputChange} getList={this.getList} ></AppCollapseNavBar>
             </Col>
             <Col md={6} >
-              <SignatureContainer isOpen={this.state.isOpenModal} toggle={this.toggleModal} list={this.state}/>
+              <SignatureContainer  isOpen={this.state.isOpenModal} toggle={this.toggleModal} list={this.state}/>
             </Col>
           </Row>
         </Container>

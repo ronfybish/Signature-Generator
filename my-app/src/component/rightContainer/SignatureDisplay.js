@@ -11,6 +11,7 @@ const SignatureDisplay = (props)=>  {
         backgroundColor:style[0].userInput,
         color:style[1].userInput,
         borderRadius:style[2].userInput+"px",
+        fontSize:'12px'
     }
     const contentStyle={
         paddingTop:style[3].userInput+"px",
@@ -31,20 +32,9 @@ const SignatureDisplay = (props)=>  {
         borderRadius:style[9].userInput+"px"
     };
         return (
-                <div className="mt-4 ">
-                    <Row inline="true" style={{background:"#8214B6"}} className="text-white rounded p-2">
-                        <div className="mr-auto ">New Message</div>
-                        <div className="">X</div>
-                    </Row>
-                    <Row className="text-muted my-4">
-                        <Col>
-                            <div className="mb-2 border-muted border-bottom">To</div>
-                            <div className="border-muted border-bottom">Subject</div>
-                        </Col>
-                    </Row>
-
+                <div className="mt-5" >
                     <Row style={mainStyle} className="py-3 align-items-center"> 
-                        <Col lg="3" xs="4"  className="align-self-center " > 
+                        <Col lg="2" xs="3"  className="align-self-center " > 
                             
                             {
                                 logo.userInput.length>0?
@@ -79,8 +69,6 @@ const SignatureDisplay = (props)=>  {
                                     })
                                 }                           
                         </Col>
-
-
                     </Row>
                 </div>
         )
