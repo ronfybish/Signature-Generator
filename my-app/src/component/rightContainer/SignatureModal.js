@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Input,  } from 'reactstrap';
 
 
-const AppModal= props =>(
+const SignatureModal= props =>(
     <div className="text-center">
         <Button style={{background:"#8214B6"}} className="px-5 rounded-pill" onClick={props.toggle}>Generate Signature</Button>
             <Modal isOpen={props.isOpen} toggle={props.toggle} >
@@ -18,4 +18,4 @@ const AppModal= props =>(
     </div>
 )
 
-export default AppModal;
+export default SignatureModal;

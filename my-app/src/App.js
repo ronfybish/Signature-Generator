@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import AppNavBar from './component/AppNavBar'
 import AppHeading from './component/AppHeading'
-import AppCollapseNavBar from './component/AppCollapseNavBar'
-import SignatureTemplate from './component/SignatureTemplate'
+import AppCollapseNavBar from './component/leftContainer/AppCollapseNavBar'
+import SignatureContainer from './component/rightContainer/SignatureContainer'
 import { Container, Row, Col } from 'reactstrap';
 import './App.css';
 
@@ -12,7 +12,7 @@ class App extends Component {
 
     this.state={
       content:[{index:"1",id:'Full Name',type:"text",userInput:'',min:"20",max:"40"},{index:"2",id:'Role',type:"text",userInput:'',min:"20",max:"40"},{index:"1",id:'Email',type:"text",userInput:'',min:"20",max:"40"},{index:"2",id:'Phone',type:"text",userInput:'',min:"0",max:"0"},{index:"1",id:'Address',type:"text",userInput:'',min:"0",max:"0"},{index:"2",id:'Website',type:"text",userInput:'',min:"0",max:"0"}],
-      social:[{index:"1",id:'FaceBook',userInput:'',type:"text",min:"20",max:"40",icon:'./facebook.png'},{index:"2",id:'Instagram',type:"text",userInput:'',min:"20",max:"40",icon:'./instagram.png'},{index:"1",id:'Twitter',type:"text",userInput:'',min:"20",max:"40",icon:'./twitter.png'},{index:"2",id:'Linkedin',type:"text",userInput:'',min:"20",max:"40",icon:'./linkedin.png'}],
+      social:[{index:"1",id:'FaceBook',userInput:'',type:"text",min:"20",max:"40",icon:'facebook.png'},{index:"2",id:'Instagram',type:"text",userInput:'',min:"20",max:"40",icon:'instagram.png'},{index:"1",id:'Twitter',type:"text",userInput:'',min:"20",max:"40",icon:'twitter.png'},{index:"2",id:'Linkedin',type:"text",userInput:'',min:"20",max:"40",icon:'linkedin.png'}],
       images:[{index:"1",id:"Logo",type:'file',userInput:'',min:"50",max:"75"},{index:"2",id:"Profile",type:'file',userInput:'',min:"50",max:"75"}],
       style:[{index:"1",id:"Background Color",userInput:'',type:'color',min:"20",max:"40"},{index:"1",id:"text color",userInput:'',type:'color',min:"20",max:"40"},{index:"2",id:"Background Rounding",userInput:'0',type:'range',min:"0",max:"30"},{index:"2",id:"Row spacing",userInput:'2',type:'range',min:"2",max:"4"},{index:"1",id:"Logo size",userInput:'70',type:'range',min:"70",max:"100"},{index:"2",id:"Logo border Radius",userInput:'0',type:'range',min:"20",max:"40"},{index:"1",id:"Profile image size",userInput:'50',type:'range',min:"50",max:"62"},{index:"2",id:"Profile Image Rounding",userInput:'0',type:'range',min:"0",max:"40"},{index:"1",id:"Social size",userInput:'20',type:'range',min:"20",max:"25"},{index:"2",id:"Social Rounding",userInput:'0',type:'range',min:"0",max:"10"}],
       isOpenNavBar:false,
@@ -68,7 +68,7 @@ class App extends Component {
                 <AppCollapseNavBar change={this.handleInputChange} getList={this.getList} ></AppCollapseNavBar>
             </Col>
             <Col md={6} >
-              <SignatureTemplate isOpen={this.state.isOpenModal} toggle={this.toggleModal} list={this.state}/>
+              <SignatureContainer isOpen={this.state.isOpenModal} toggle={this.toggleModal} list={this.state}/>
             </Col>
           </Row>
         </Container>

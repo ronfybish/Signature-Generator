@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import AppInputList from './AppInputList'
+import AppInputList from '../leftContainer/AppInputList'
 import {  Collapse, Button, ButtonGroup, Card, CardBody } from 'reactstrap';
 
 

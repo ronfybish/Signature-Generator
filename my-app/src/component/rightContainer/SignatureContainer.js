@@ -1,10 +1,10 @@
 import React from 'react';
 import SignatureDisplay from './SignatureDisplay'
-import AppModal from './AppModal'
+import SignatureModal from './SignatureModal'
 import { Card,  CardBody,CardTitle, } from 'reactstrap';
 
 
-const SignatureTemplate= (props) =>{
+const SignatureContainer= (props) =>{
 
     
     return(
@@ -21,9 +21,9 @@ const SignatureTemplate= (props) =>{
                             <SignatureDisplay list={props.list}/>
                     </CardBody>
                 </Card>
-                <AppModal toggle={props.toggle} isOpen={props.isOpen}/>
+                <SignatureModal toggle={props.toggle} isOpen={props.isOpen}/>
             </div>
             )
 }
 
-export default SignatureTemplate;
+export default SignatureContainer;
