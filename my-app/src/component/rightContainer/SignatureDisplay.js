@@ -44,7 +44,7 @@ const SignatureDisplay = (props)=>  {
                     </Row>
 
                     <Row style={mainStyle} className="py-3 align-items-center"> 
-                        <Col xl="3"  xs="4" className="align-self-center mx-auto" > 
+                        <Col lg="3" xs="4"  className="align-self-center " > 
                             
                             {
                                 logo.userInput.length>0?
@@ -52,7 +52,7 @@ const SignatureDisplay = (props)=>  {
                                 :
                                 null                                       
                             }
-                            <div className="d-flex justify-content-between">
+                            <div className="d-flex justify-content-between mx-auto">
                             {
                                 social.map((el,index)=>{
                                     if(el.userInput.length>0)
@@ -63,11 +63,11 @@ const SignatureDisplay = (props)=>  {
                             </div>
                         
                         </Col>
-                        <Col xs="8" xl="9" lg="8" style={{borderLeftColor:style[1].userInput,borderLeftStyle:'solid'}} >
+                        <Col xs="8" lg="9"  style={{borderLeftColor:style[1].userInput,borderLeftStyle:'solid'}} >
                                 {
                                         profile.userInput.length>0?
                                         
-                                           <img alt="img" style={profileStyle} src={profile.userInput}/>
+                                           <img className="py-1" alt="img" style={profileStyle} src={profile.userInput}/>
                                         
                                         :
                                         null
