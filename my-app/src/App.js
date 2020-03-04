@@ -17,7 +17,6 @@ class App extends Component {
       style:[{index:"1",id:"Background Color",userInput:'',type:'color',min:"20",max:"40"},{index:"1",id:"Text Color",userInput:'',type:'color',min:"20",max:"40"},{index:"2",id:"Background Rounding",userInput:'0',type:'range',min:"0",max:"40"},{index:"2",id:"Row Spacing",userInput:'2',type:'range',min:"2",max:"5"},{index:"1",id:"Logo Size",userInput:'50',type:'range',min:"50",max:"65"},{index:"2",id:"Logo Image Rounding",userInput:'0',type:'range',min:"20",max:"40"},{index:"1",id:"Profile Image Size",userInput:'45',type:'range',min:"58",max:"60"},{index:"2",id:"Profile Image Rounding",userInput:'0',type:'range',min:"0",max:"40"},{index:"1",id:"Social Size",userInput:'10',type:'range',min:"10",max:"14"},{index:"2",id:"Social Rounding",userInput:'0',type:'range',min:"0",max:"30"}],
       isOpenNavBar:false,
       isOpenModal:false,
-      textToCopy:""
     }
     this.toggleNavBar=this.toggleNavBar.bind(this)
     this.toggleModal=this.toggleModal.bind(this)

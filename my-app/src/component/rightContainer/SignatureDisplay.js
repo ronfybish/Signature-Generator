@@ -32,7 +32,7 @@ const SignatureDisplay = (props)=>  {
         borderRadius:style[9].userInput+"px"
     };
         return (
-                <div className="mt-5" >
+                <div className="mt-5"  >
                     <Row style={mainStyle} className="py-3 align-items-center"> 
                         <Col lg="2" xs="3"  className="align-self-center " > 
                             

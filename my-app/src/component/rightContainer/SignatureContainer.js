@@ -32,8 +32,11 @@ const SignatureContainer= (props) =>{
                         </CardTitle>
                             <SignatureDisplay list={props.list}/>
                     </CardBody>
+                    <CardFooter>
+
+                    </CardFooter>
                 </Card>
-                <ModalDisplay list={props.list}  toggle={props.toggle} isOpen={props.isOpen}/>
+                    <ModalDisplay list={props.list}  toggle={props.toggle} isOpen={props.isOpen}/>
             </div>
             )
 }
