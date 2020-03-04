@@ -8,10 +8,10 @@ const ModalDisplay= props =>(
     <div>
         <Button style={{background:"#8214B6"}} className="mb-5 mt-2 btn-block rounded-pill " onClick={props.toggle}>Generate Signature</Button>
             <Modal  isOpen={props.isOpen} toggle={props.toggle} >
-                <ModalHeader  toggle={props.toggle} ><h3 style={{color:"#8214B6"}} className="display-5">Just Copy And Paste!</h3></ModalHeader>
+                <ModalHeader  toggle={props.toggle} ><p style={{color:"#8214B6"}} className="display-5">Just Copy And Paste!</p></ModalHeader>
                     <ModalBody>
                             {/* <ModalSignature list={props.list}/> */}
-                            <div contentEditable={true}><SignatureDisplay list={props.list} /></div>
+                            <SignatureDisplay list={props.list} />
                     </ModalBody>
                     <ModalFooter >
                         <Button  onClick={props.toggle} style={{background:"#8214B6"}}>Cancel</Button>
