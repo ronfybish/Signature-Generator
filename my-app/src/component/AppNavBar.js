@@ -13,7 +13,7 @@ export default class AppNavBar extends Component {
               <Collapse isOpen={this.props.isOpen} navbar>
                 <Nav className="text-center" navbar>
                   <NavItem>
-                    <NavLink target="_blank" href="https://www.linkedin.com/in/ron-fybish-9b0194157/">Linkedin Profile</NavLink>
+                    <NavLink target="_blank" href="https://www.linkedin.com/in/ron-fybish-9b0194157/"><strong>Linkedin Profile</strong></NavLink>
                   </NavItem>
                   <NavItem>
                     <NavLink target="_blank" href="https://github.com/ronfybish/Signature-Generator">My GitHub</NavLink>
