@@ -64,10 +64,10 @@ class App extends Component {
         <AppHeading></AppHeading>
         <Container>
           <Row>
-            <Col md={6} className="mb-2">
+            <Col md={{size:7,order:1}} lg={{size:6,order:1}}  xs={{order:2}} className="mb-2">
                 <AppCollapseNavBar change={this.handleInputChange} getList={this.getList} ></AppCollapseNavBar>
             </Col>
-            <Col md={6} >
+            <Col md={{size:5,order:2}}  lg={{size:6,order:2}} xs={{order:1}} >
               <SignatureContainer  isOpen={this.state.isOpenModal} toggle={this.toggleModal} list={this.state}/>
             </Col>
           </Row>
