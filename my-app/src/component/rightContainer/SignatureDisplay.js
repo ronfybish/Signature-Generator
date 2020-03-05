@@ -31,10 +31,9 @@ const SignatureDisplay = (props)=>  {
         borderRadius:style[9].userInput+"px"
     };
         return (
-                <div className="mt-5"  >
+                <div className="mt-5">
                     <Row style={mainStyle} className="py-3 align-items-center"> 
-                        <Col lg="3" xs="4"  className="align-self-center " > 
-                            
+                        <Col lg="3" xs="4"  className="align-self-center"> 
                             {
                                 logo.userInput.length>0?
                                 <div className="ml-2" ><img  alt="img-logo" style={logoStyle} src={logo.userInput}/></div>

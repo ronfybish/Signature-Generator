@@ -12,6 +12,7 @@ export default class AppCollapseNavBar extends Component {
         }
 
     }
+
     toggleTab(id){
         let newOpenTab=[];
         this.state.openTab.forEach(el=>{
@@ -33,10 +34,10 @@ export default class AppCollapseNavBar extends Component {
             <div>
                 <Card className="bg-white ">
                 <ButtonGroup className="p-3">
-                    <Button className={content!==""?"active text-white rounded-pill":"rounded-pill"} color="light" style={content!==""?{background:"#8214B6"}:null}   onClick={() => this.toggleTab("content")}>content</Button>
-                    <Button className={social!==""?"active text-white rounded-pill":"rounded-pill"} color="light"  style={social!==""?{background:"#8214B6"}:null}  onClick={() => this.toggleTab("social")}>social</Button>
-                    <Button className={images!==""?"active text-white rounded-pill":"rounded-pill"} color="light"  style={images!==""?{background:"#8214B6"}:null}  onClick={() => this.toggleTab("images")}>images</Button>
-                    <Button className={style!==""?"active text-white rounded-pill":"rounded-pill"} color="light"  style={style!==""?{background:"#8214B6"}:null}  onClick={() => this.toggleTab("style")} >style</Button>
+                    <Button className={content!==""?"active text-white rounded-pill":"m-1 rounded-pill"} color="light" style={content!==""?{background:"#8214B6"}:{borderColor:"#8214B6",color:"#8214B6"}}   onClick={() => this.toggleTab("content")}>Content</Button>
+                    <Button className={social!==""?"active text-white rounded-pill":"m-1 rounded-pill"} color="light"  style={social!==""?{background:"#8214B6"}:{borderColor:"#8214B6",color:"#8214B6"}}  onClick={() => this.toggleTab("social")}>Social</Button>
+                    <Button className={images!==""?"active text-white rounded-pill":"m-1 rounded-pill"} color="light"  style={images!==""?{background:"#8214B6"}:{borderColor:"#8214B6",color:"#8214B6"}}  onClick={() => this.toggleTab("images")}>images</Button>
+                    <Button className={style!==""?"active text-white rounded-pill":"m-1 rounded-pill"} color="light"  style={style!==""?{background:"#8214B6"}:{borderColor:"#8214B6",color:"#8214B6"}}  onClick={() => this.toggleTab("style")} >style</Button>
                 </ButtonGroup>
                 <Collapse isOpen={whosOpen.isOpen}>
                         <CardBody className="py-3">

@@ -1,7 +1,6 @@
 import React from 'react';
-import ModalSignature from './ModalSignature'
 import SignatureDisplay from './SignatureDisplay'
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Input,  } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, } from 'reactstrap';
 
 
 const ModalDisplay= props =>(
