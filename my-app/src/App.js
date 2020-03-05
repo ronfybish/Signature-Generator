@@ -1,15 +1,12 @@
 import React, { Component } from 'react'
+import { Container, Row, Col } from 'reactstrap';
+import {BrowserRouter as Router,Switch,Route,} from "react-router-dom";
 import AppNavBar from './component/AppNavBar'
 import AppHeading from './component/AppHeading'
+
 import AppCollapseNavBar from './component/leftContainer/AppCollapseNavBar'
 import SignatureContainer from './component/rightContainer/SignatureContainer'
 import ImplementGuide from './component/ImplementGuide'
-import { Container, Row, Col } from 'reactstrap';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
 import './App.css';
 
 class App extends Component {
@@ -24,15 +21,18 @@ class App extends Component {
       isOpenNavBar:false,
       isOpenModal:false,
     }
-    this.toggleNavBar=this.toggleNavBar.bind(this)
-    this.toggleModal=this.toggleModal.bind(this)
+
   }
 
-  toggleNavBar(){
+  toggleNavBar=()=>{
     this.setState({isOpenNavBar:!this.state.isOpenNavBar});
   }
-  toggleModal(){
+  toggleModal=()=>{
     this.setState({isOpenModal:!this.state.isOpenModal});
+  }
+
+  getList = (listName) => {
+    return this.state[listName];
   }
 
   handleInputChange = (event,inputId,listName) =>{
@@ -59,9 +59,6 @@ class App extends Component {
       
   }
 
-  getList = (listName) => {
-    return this.state[listName];
-  }
 
   render() {
     return (
@@ -91,6 +88,5 @@ class App extends Component {
     )
   }
 }
-
 
 export default App;
