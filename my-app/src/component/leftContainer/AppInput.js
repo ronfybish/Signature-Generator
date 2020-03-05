@@ -1,15 +1,15 @@
 import React from 'react';
-import { FormGroup, Label, Input } from 'reactstrap';
+import { FormGroup, Label, Input,CustomInput } from 'reactstrap';
 
 
 const AppInput= props =>(
-    <div>
+    <div >
         {
         props.type==="file"?
-            <div className="custom-file p-4">
-                <Input onChange={(event)=>props.change(event,props.id,props.listName)} type="file" id="myfile" className="custom-file-input"></Input>
-                <Label className="custom-file-label  border-primary" for="myfile">{props.id} Img</Label>
-            </div>
+                  <FormGroup >
+                    <Label for={props.id}>{props.id} Image</Label>
+                    <CustomInput type="file" id={props.id} name="customFile" onChange={(event)=>props.change(event,props.id,props.listName)} label="Pick a file!" />
+                </FormGroup>
             :
             <FormGroup className="mr-2">
                 <Label for={props.id}>{props.id} :</Label>
