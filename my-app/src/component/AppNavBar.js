@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
-
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink,} from 'reactstrap';
+import {Link} from 'react-router-dom'
 export default class AppNavBar extends Component {    
     render() {
         return (
@@ -17,6 +17,9 @@ export default class AppNavBar extends Component {
                   </NavItem>
                   <NavItem>
                     <NavLink target="_blank" href="https://github.com/ronfybish/Signature-Generator">My GitHub</NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <Link to="/guide">guide</Link>
                   </NavItem>
                 </Nav>
               </Collapse>

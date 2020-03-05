@@ -3,7 +3,13 @@ import AppNavBar from './component/AppNavBar'
 import AppHeading from './component/AppHeading'
 import AppCollapseNavBar from './component/leftContainer/AppCollapseNavBar'
 import SignatureContainer from './component/rightContainer/SignatureContainer'
+import ImplementGuide from './component/ImplementGuide'
 import { Container, Row, Col } from 'reactstrap';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 import './App.css';
 
 class App extends Component {
@@ -59,21 +65,29 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <AppNavBar toggle={this.toggleNavBar} isOpen={this.state.isOpenNavBar}></AppNavBar>
-        <AppHeading></AppHeading>
-        <Container>
-          <Row>
-            <Col md={{size:7,order:1}} lg={{size:6,order:1}}  xs={{order:2}} className="mb-2">
-                <AppCollapseNavBar change={this.handleInputChange} getList={this.getList} ></AppCollapseNavBar>
-            </Col>
-            <Col md={{size:5,order:2}}  lg={{size:6,order:2}} xs={{order:1}} >
-              <SignatureContainer  isOpen={this.state.isOpenModal} toggle={this.toggleModal} list={this.state}/>
-            </Col>
-          </Row>
-        </Container>
-
-      </div>
+      <Router>
+        <div className="App">
+          <AppNavBar toggle={this.toggleNavBar} isOpen={this.state.isOpenNavBar}></AppNavBar>
+          <Switch>
+              <Route  path="/guide">
+                <ImplementGuide/>
+              </Route>
+              <Route path="/">
+                <AppHeading/>
+                <Container>
+                  <Row>
+                    <Col md={{size:7,order:1}} lg={{size:6,order:1}}  xs={{order:2}} className="mb-2">
+                        <AppCollapseNavBar change={this.handleInputChange} getList={this.getList} ></AppCollapseNavBar>
+                    </Col>
+                    <Col md={{size:5,order:2}}  lg={{size:6,order:2}} xs={{order:1}} >
+                      <SignatureContainer  isOpen={this.state.isOpenModal} toggle={this.toggleModal} list={this.state}/>
+                    </Col>
+                  </Row>
+                </Container>
+              </Route>
+          </Switch>  
+        </div>
+      </Router>
     )
   }
 }
