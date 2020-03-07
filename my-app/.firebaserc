@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "signautre-c6699"
+    "default": "signautre-c6699",
+    "staging": "signautre-c6699"
   }
 }
