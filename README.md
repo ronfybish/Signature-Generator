@@ -3,6 +3,8 @@
 Outlook, Apple Mail, Thunderbird and Office 365 client.
 *[Just-Sign](https://www.just-sign.com)*
 
+## Screenshots
+![](guides.gif)
 
 ## Table of contents
 * [General info](#general-info)
@@ -15,10 +17,6 @@ Outlook, Apple Mail, Thunderbird and Office 365 client.
 
 1. Create free tool to genarte Digital Email Signature
 2. simple & easy 
-
-
-## Screenshots
-![](guides.gif)
 
 
 ## Technologies
