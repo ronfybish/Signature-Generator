@@ -6,7 +6,7 @@ import AppHeading from './component/AppHeading'
 
 import AppCollapseNavBar from './component/leftContainer/AppCollapseNavBar'
 import SignatureContainer from './component/rightContainer/SignatureContainer'
-import ImplementGuide from './component/ImplementGuide'
+import UserGuide from './component/UserGuide'
 import './App.css';
 
 class App extends Component {
@@ -69,7 +69,7 @@ class App extends Component {
           <AppNavBar toggle={this.toggleNavBar} isOpen={this.state.isOpenNavBar}></AppNavBar>
           <Switch>
               <Route  path="/guide">
-                <ImplementGuide/>
+                <UserGuide/>
               </Route>
               <Route path="/">
                 <AppHeading/>

@@ -1,7 +1,7 @@
 import React from 'react';
 import SignatureDisplay from './SignatureDisplay'
 import ModalDisplay from './ModalDisplay'
-import { Card,Row,Col, CardBody,CardTitle, CardHeader,CardFooter } from 'reactstrap';
+import { Card, CardBody, CardHeader,} from 'reactstrap';
 
 
 const SignatureContainer= (props) =>{
@@ -14,8 +14,7 @@ const SignatureContainer= (props) =>{
                         <p className="text-justify">
                         <strong>Hey,</strong><br/>
                         This is the preview of your real signature.<br/>
-                        Fill up your details and signature design in the column on the left.<br/>
-                            <strong>Have Fun !</strong>
+                        Fill up your details and signature design in the column on the left.
                         </p>
                     </CardHeader>
                     <CardBody >
@@ -35,7 +34,7 @@ const SignatureContainer= (props) =>{
                                     <SignatureDisplay list={props.list}/>
                                     :
                                     <div>
-                                        <img className="mt-3 mb-3"  style={{maxWidth:"280px"}} src={require('../../img/‏‏ll.JPG')}/>
+                                        <img className="mt-3 mb-3" alt="signature-example-img" style={{maxWidth:"280px"}} src={require('../../img/‏‏ll.JPG')}/>
                                     </div>
                                         
                                 }
