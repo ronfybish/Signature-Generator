@@ -1,7 +1,7 @@
 # Email Signature Generator
 > Create an email signature template with our easy-to-use generator.
-> visit our website and start creating your own signature:
-> #### [I'm an inline-style link](www.just-sign.com)
+ visit our website and start creating your own signature:
+ #### [link text itself](www.just-sign.com)
 
 
 ## Table of contents
