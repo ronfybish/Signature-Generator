@@ -33,7 +33,7 @@ export default class AppCollapseNavBar extends Component {
         return (
             <div>
                 <Card className="bg-white ">
-                <ButtonGroup className="p-3">
+                <ButtonGroup className="mt-3 mx-1">
                     <Button className={content!==""?"active text-white rounded-pill":"m-1 rounded-pill"} color="light" style={content!==""?{background:"#8214B6"}:{borderColor:"#8214B6",color:"#8214B6"}}   onClick={() => this.toggleTab("content")}>General</Button>
                     <Button className={social!==""?"active text-white rounded-pill":"m-1 rounded-pill"} color="light"  style={social!==""?{background:"#8214B6"}:{borderColor:"#8214B6",color:"#8214B6"}}  onClick={() => this.toggleTab("social")}>Links</Button>
                     <Button className={images!==""?"active text-white rounded-pill":"m-1 rounded-pill"} color="light"  style={images!==""?{background:"#8214B6"}:{borderColor:"#8214B6",color:"#8214B6"}}  onClick={() => this.toggleTab("images")}>images</Button>
