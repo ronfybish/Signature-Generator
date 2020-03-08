@@ -1,21 +1,55 @@
 # Email Signature Generator
+> Create an email signature template with our easy-to-use generator.
 
-Create an email signature template with our easy-to-use generator.
+## Table of contents
+* [General info](#general-info)
+* [Screenshots](#screenshots)
+* [Technologies](#technologies)
+* [Setup](#setup)
+* [Contact](#contact)
 
-## About / Synopsis
+## General info
+Add more general information about project. What the purpose of the project is? Motivation?
 
-* What is it, what does it do / Abstract
-* Project status: working/prototype
-* Nuxeo Support
+## Screenshots
+![Example screenshot](./img/screenshot.png)
 
-See real examples:
+## Technologies
+* Tech 1 - version 1.0
+* React-strap 8.4.1
+* React-Router 5.1.2
+* Firebase Hosting
 
-* <https://just-sign.com/>
+## Setup
+Describe how to install / setup your local environement / add link to demo version.
 
-## Installation
+## Code Examples
+Show examples of usage:
+`put-your-code-here`
 
-Sample:
+## Features
+List of features ready and TODOs for future development
+* Awesome feature 1
+* Awesome feature 2
+* Awesome feature 3
 
-* From the Nuxeo Marketplace: install [the Sample Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-sample).
-* From the command line: `nuxeoctl mp-install nuxeo-sample`
+To-do list:
+* Wow improvement to be done 1
+* Wow improvement to be done 2
 
+
+
+## Contact
+Created by [@Ron-Fybish](https://www.linkedin.com/in/ron-fybish-9b0194157/) - feel free to contact me!
+
+
+
+	
+## Setup
+To run this project, install it locally using npm:
+
+```
+$ cd ../lorem
+$ npm install
+$ npm start
+```
