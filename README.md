@@ -18,7 +18,7 @@ Outlook, Apple Mail, Thunderbird and Office 365 client.
 
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
+![Example screenshot]('./Redme-gif/guides.gif)
 
 
 ## Technologies
