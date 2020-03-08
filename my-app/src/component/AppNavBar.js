@@ -19,7 +19,7 @@ export default class AppNavBar extends Component {
                     <NavLink target="_blank" href="https://github.com/ronfybish/Signature-Generator">My GitHub</NavLink>
                   </NavItem>
                   <NavItem>
-                    <Link to="/guide">guide</Link>
+                    <Link to="/guide"><div>User Guide</div></Link>
                   </NavItem>
                 </Nav>
               </Collapse>
