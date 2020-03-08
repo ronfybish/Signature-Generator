@@ -1,6 +1,5 @@
 # Email Signature Generator
 > Create an email signature template with our easy-to-use generator.
-#### visit our website and start creating your own signature:
 [just-sign.com](www.just-sign.com)
 
 
@@ -12,7 +11,7 @@
 
 
 ## General info
-Add more general information about project. What the purpose of the project is? Motivation?
+Just-Sign is an online email signature generator that helps create professional and visually compelling email signatures for Gmail, Outlook, Apple Mail, Thunderbird and Office 365 client.
 
 
 ## Screenshots
