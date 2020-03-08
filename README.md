@@ -25,18 +25,9 @@ Add more general information about project. What the purpose of the project is? 
 
 ## Setup
 Describe how to install / setup your local environement / add link to demo version.
-
-
-## Features
-List of features ready and TODOs for future development
-* Awesome feature 1
-* Awesome feature 2
-* Awesome feature 3
-
-To-do list:
-* Wow improvement to be done 1
-* Wow improvement to be done 2
-
+```
+put text here
+```
 
 ## Contact
 Created by [@Ron-Fybish](https://www.linkedin.com/in/ron-fybish-9b0194157/) - feel free to contact me!
