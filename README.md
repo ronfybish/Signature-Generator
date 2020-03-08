@@ -4,20 +4,19 @@
 
  ## *[www.just-sign.com](https://www.just-sign.com)*
 
-
-![](guides.gif)
----
 ## Table of contents
 * [General info](#general-info)
-* [Screenshots](#screenshots)
 * [Technologies](#technologies)
 * [Contact](#contact)
 
 
-## General info
+![](guides.gif)
+---
 
+## General info
 1. Create free tool to genarte Digital Email Signature
-2. simple & easy 
+2. Online Tool
+3. Increase your business value
 
 ## Technologies
 * React-strap 8.4.1
