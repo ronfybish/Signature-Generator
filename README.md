@@ -1,11 +1,11 @@
 # Email Signature Generator
-> Just-Sign is an online email signature generator that helps create professional and visually compelling email signatures for Gmail,
-Outlook, Apple Mail, Thunderbird and Office 365 client.
-*[Just-Sign](https://www.just-sign.com)*
+> Just-Sign is an online email signature generator that helps create professional and visually compelling email signatures
+> for Gmail,Outlook, Apple Mail, Thunderbird and Office 365 client.
+> #### *[Just-Sign](https://www.just-sign.com)*
 
-## Screenshots
+
 ![](guides.gif)
-
+---
 ## Table of contents
 * [General info](#general-info)
 * [Screenshots](#screenshots)
@@ -18,7 +18,6 @@ Outlook, Apple Mail, Thunderbird and Office 365 client.
 1. Create free tool to genarte Digital Email Signature
 2. simple & easy 
 
-
 ## Technologies
 * React-strap 8.4.1
 * Bootstrap 4
@@ -27,7 +26,6 @@ Outlook, Apple Mail, Thunderbird and Office 365 client.
 * DNS, custom domain name from Goddady 
 * HTMl, CSS, JavaScript
 * UI/UX Figma 
-
 
 
 ## Contact
