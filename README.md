@@ -18,7 +18,7 @@ Outlook, Apple Mail, Thunderbird and Office 365 client.
 
 
 ## Screenshots
-![]('./guides.gif)
+![](guides.gif)
 
 
 ## Technologies
