@@ -12,29 +12,36 @@ const SignatureContainer= (props) =>{
                 <Card className="border rounded mb-2">
                     <CardHeader>
                         <p className="text-justify">
-                                <strong>Hey,</strong><br/>
-                                This is the preview of your signature.<br/>
-                                You can edit the content and signature design in the column on the left.<br/>
-                                Good luck :)</p>
+                        <strong>Hey,</strong><br/>
+                        This is the preview of your real signature.<br/>
+                        Fill up your details and signature design in the column on the left.<br/>
+                            <strong>Have Fun !</strong>
+                        </p>
                     </CardHeader>
-                    <CardBody>
-                        <CardTitle>
-                            <Row inline="true" style={{background:"#404040"}} className="text-white rounded p-2">
-                                <div className="mr-auto ">New Message</div>
-                                <div>x</div>
-                            </Row>
-                            <Row className="text-muted my-4">
-                                <Col>
-                                    <div className="mb-2 border-muted border-bottom">To</div>
-                                    <div className="border-muted border-bottom">Subject</div>
-                                </Col>
-                            </Row>
-                        </CardTitle>
-                            <SignatureDisplay list={props.list}/>
+                    <CardBody >
+                        <div className="border d-flex flex-column rounded">
+                            <div className="d-flex rounded p-2" style={{background:"#B7B3B7"}}>
+                                <div className="pl-2 mr-auto text-white">New Message</div>
+                                <div className="text-white">x</div>
+                            </div>
+                            <div className="mb-2 pl-2 pt-2 text-muted border-muted border-bottom">To:</div>
+                            <div className="border-muted pl-2 text-muted border-bottom">Subject:</div>
+                            <div className="p-3">
+                                        <p>Dear Mr. User</p>
+                                        <p>Thank you for taking the time to create your signature.<br/> I look forward to hearing from you!</p>
+                                        <p>Sincerely,<br/> Ron Fybish</p>
+                                {
+                                    props.isChange?
+                                    <SignatureDisplay list={props.list}/>
+                                    :
+                                    <div>
+                                        <img className="mt-3 mb-3"  style={{maxWidth:"280px"}} src={require('../../img/‏‏ll.JPG')}/>
+                                    </div>
+                                        
+                                }
+                            </div>
+                        </div>      
                     </CardBody>
-                    <CardFooter>
-
-                    </CardFooter>
                 </Card>
                     <ModalDisplay list={props.list}  toggle={props.toggle} isOpen={props.isOpen}/>
             </div>
@@ -42,3 +49,4 @@ const SignatureContainer= (props) =>{
 }
 
 export default SignatureContainer;
+

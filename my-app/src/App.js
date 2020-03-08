@@ -20,6 +20,7 @@ class App extends Component {
       style:[{index:"1",id:"Background Color",userInput:'',type:'color',min:"20",max:"40"},{index:"1",id:"Text Color",userInput:'',type:'color',min:"20",max:"40"},{index:"2",id:"Background Rounding",userInput:'0',type:'range',min:"0",max:"55"},{index:"2",id:"Row Spacing",userInput:'2',type:'range',min:"2",max:"5"},{index:"1",id:"Logo Size",userInput:'65',type:'range',min:"65",max:"80"},{index:"2",id:"Logo Image Rounding",userInput:'0',type:'range',min:"20",max:"40"},{index:"1",id:"Profile Image Size",userInput:'55',type:'range',min:"55",max:"61"},{index:"2",id:"Profile Image Rounding",userInput:'0',type:'range',min:"0",max:"40"},{index:"1",id:"Social Size",userInput:'20',type:'range',min:"20",max:"21"},{index:"2",id:"Social Rounding",userInput:'0',type:'range',min:"0",max:"30"}],
       isOpenNavBar:false,
       isOpenModal:false,
+      isChange:false,
     }
 
   }
@@ -36,6 +37,7 @@ class App extends Component {
   }
 
   handleInputChange = (event,inputId,listName) =>{
+    this.setState({isChange:true})
     event.preventDefault();
     let updateList=this.state[listName];
     let updateObj=updateList.find(el=>el.id===inputId)
@@ -77,7 +79,7 @@ class App extends Component {
                         <AppCollapseNavBar change={this.handleInputChange} getList={this.getList} ></AppCollapseNavBar>
                     </Col>
                     <Col md={{size:5,order:2}}  lg={{size:6,order:2}} xs={{order:1}} >
-                      <SignatureContainer  isOpen={this.state.isOpenModal} toggle={this.toggleModal} list={this.state}/>
+                      <SignatureContainer isChange={this.state.isChange}  isOpen={this.state.isOpenModal} toggle={this.toggleModal} list={this.state}/>
                     </Col>
                   </Row>
                 </Container>

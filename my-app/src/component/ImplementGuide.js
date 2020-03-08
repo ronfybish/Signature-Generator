@@ -8,11 +8,8 @@ export default class ImplementGuide extends Component {
                 <Jumbotron className="text-center mt-5">
                     <h1 className="display-3" style={{color:"#8214B6"}}>How to Add Your Email Signature </h1>
                     <p>(Gmail, Yahoo, Outlook and more)</p>
-                    <hr className="my-2" />
-                    <Button style={{borderColor:"#8214B6",color:"black"}} className="rounded-pil mt-3 px-4" outline>Watch Demo</Button> 
                 </Jumbotron>
                 <ListGroup>
-                    <h3>Add or change a signature</h3>
                     
                     <ListGroupItem>1. Open <a href="www.gmail.com">Gmail</a></ListGroupItem>
                     <ListGroupItem>2. In the top right corner, click <img height="30px"  src={require('../img/setting.png')}/>
