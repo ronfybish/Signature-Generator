@@ -9,9 +9,6 @@
 See real examples:
 
 * <https://github.com/nuxeo/nuxeo/blob/master/README.md>
-* <https://github.com/nuxeo/nuxeo-drive/blob/master/README.md>
-* <https://github.com/nuxeo/nuxeo-sdk-ios/blob/master/README.md>
-
 
 ## Installation
 
@@ -24,13 +21,6 @@ Sample:
 
 ### Screenshots
 
-### Features
-
-## Code
-
-[![Build Status](https://qa.nuxeo.org/jenkins/buildStatus/icon?job=/nuxeo/addons_nuxeo-sample-project-master)](https://qa.nuxeo.org/jenkins/job/nuxeo/job/addons_nuxeo-sample-project-master/)
-
-### Content
 
 Description, sub-modules organization...
 
