@@ -1,6 +1,6 @@
 # Email Signature Generator
 > Create an email signature template with our easy-to-use generator.
-[just-sign.com](www.just-sign.com)
+*[Just-Sign](https://www.just-sign.com)*
 
 
 ## Table of contents
