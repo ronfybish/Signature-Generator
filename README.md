@@ -4,14 +4,15 @@
 
  ## *[www.just-sign.com](https://www.just-sign.com)*
 
+
+![](guides.gif)
+---
+
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Contact](#contact)
 
-
-![](guides.gif)
----
 
 ## General info
 1. Create free tool to genarte Digital Email Signature
