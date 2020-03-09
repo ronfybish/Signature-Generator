@@ -5,8 +5,6 @@ import { Card, CardBody, CardHeader,} from 'reactstrap';
 
 
 const SignatureContainer= (props) =>{
-
-    
     return(
             <div>
                 <Card className="border rounded mb-2">
@@ -42,7 +40,7 @@ const SignatureContainer= (props) =>{
                         </div>      
                     </CardBody>
                 </Card>
-                    <ModalDisplay list={props.list}  toggle={props.toggle} isOpen={props.isOpen}/>
+                    <ModalDisplay  list={props.list}  toggle={props.toggle} isOpen={props.isOpen}/>
             </div>
             )
 }

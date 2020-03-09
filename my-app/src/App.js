@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { Container, Row, Col } from 'reactstrap';
 import {BrowserRouter as Router,Switch,Route,} from "react-router-dom";
+import {storage} from './services/firebase'
 import AppNavBar from './component/AppNavBar'
 import AppHeading from './component/AppHeading'
-import {storage} from './services/firebase'
 import AppCollapseNavBar from './component/leftContainer/AppCollapseNavBar'
 import SignatureContainer from './component/rightContainer/SignatureContainer'
 import UserGuide from './component/UserGuide'
@@ -23,6 +23,7 @@ class App extends Component {
       isOpenNavBar:false,
       isOpenModal:false,
       isChange:false,
+      copied: false,
     }
 
   }
@@ -33,30 +34,24 @@ class App extends Component {
       const image=event.target.files[0];
       const uploadTask=storage.ref(`images/${image.name}`).put(image);
       uploadTask.on('state_changed',
-        (snapshot)=>{
-            //propgress
-        },
-        (error)=>{
-          console.log(error)
-        },
-        ()=>{
+      (snapshot)=>{/*propgress*/},
+      (error)=>{console.log(error)},
+      ()=>{
           storage.ref('images').child(image.name).getDownloadURL().then(url=>{
-            let updateList=this.state[listName];
-            let updateObj=updateList.find(el=>el.id===inputId)
-            let index= updateList.findIndex(el=>el.id===inputId);
-            updateObj.userInput=url;
-            updateList[index]=updateObj;
-            console.log(url)
-            this.setState({listName:updateList})
+          let updateList=this.state[listName];
+          let updateObj=updateList.find(el=>el.id===inputId)
+          let index= updateList.findIndex(el=>el.id===inputId);
+          updateObj.userInput=url;
+          updateList[index]=updateObj;
+          console.log(url)
+          this.setState({listName:updateList})
           })
         }
      )
-
     }
   }
 
-  componentDidMount()
-  { 
+  componentDidMount(){ 
     this.state.social.forEach((el)=>{
       storage.ref(`social/${el.icon}`).getDownloadURL()
       .then(url=>{
@@ -66,14 +61,16 @@ class App extends Component {
         updateObj.icon=url;
         updateList[index]=updateObj;
         this.setState({listName:updateList})
-      })
-      
-    })
-      
+      })  
+    })     
+  }
+  toggleClipbord=()=>{
+    this.setState({copied:!this.state.copied})
   }
   toggleNavBar=()=>{
     this.setState({isOpenNavBar:!this.state.isOpenNavBar});
   }
+
   toggleModal=()=>{
     this.setState({isOpenModal:!this.state.isOpenModal});
   }
@@ -88,23 +85,9 @@ class App extends Component {
     let updateList=this.state[listName];
     let updateObj=updateList.find(el=>el.id===inputId)
     let index= updateList.findIndex(el=>el.id===inputId);
-    
-    // if (event.target.files && event.target.files[0]) {
-    //   let reader = new FileReader();
-    //   reader.onload = (event) => {
-    //     updateObj.userInput=event.target.result;
-    //     updateList[index]=updateObj;
-    //     this.setState({listName:updateList})
-    //     console.log(updateObj);
-    //   };
-    //   reader.readAsDataURL(event.target.files[0]);
-    // }
-    
-      updateObj.userInput=event.target.value;
-      updateList[index]=updateObj;
-      this.setState({listName:updateList})
-    
-      
+    updateObj.userInput=event.target.value;
+    updateList[index]=updateObj;
+    this.setState({listName:updateList})  
   }
 
 
@@ -125,7 +108,7 @@ class App extends Component {
                         <AppCollapseNavBar imgChange={this.handleImageChange} change={this.handleInputChange} getList={this.getList} ></AppCollapseNavBar>
                     </Col>
                     <Col md={{size:6,order:2}}  lg={{size:6,order:2}} xs={{order:1}} >
-                      <SignatureContainer  isChange={this.state.isChange}  isOpen={this.state.isOpenModal} toggle={this.toggleModal} list={this.state}/>
+                      <SignatureContainer   isChange={this.state.isChange}  isOpen={this.state.isOpenModal} toggle={this.toggleModal} list={this.state}/>
                     </Col>
                   </Row>
                 </Container>

@@ -49,16 +49,13 @@ const SignatureDisplay = (props)=>  {
                                 })
                             }
                             </div>
-                        
                         </Col>
-                        <Col xs="8" lg="9"  style={{borderLeftColor:style[1].userInput,borderLeftStyle:'solid'}} >
+                        <Col xs="8" lg="9" style={{borderLeftColor:style[1].userInput,borderLeftStyle:'solid'}} >
                                 {
-                                        profile.userInput.length>0?
-                                        
-                                           <img className="py-1" alt="img" style={profileStyle} src={profile.userInput}/>
-                                        
-                                        :
-                                        null
+                                    profile.userInput.length>0?
+                                    <img className="py-1" alt="img" style={profileStyle} src={profile.userInput}/>
+                                    :
+                                    null
                                 }
                                 {
                                     content.map((el,index)=>{

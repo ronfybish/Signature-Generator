@@ -3,12 +3,11 @@ import AppInput from './AppInput'
 import {Form, Row, Col, Container} from 'reactstrap'
 
 const InputList= props =>(
-    
     <div>
-        <Container >
+        <Container>
             <Form>
                 <Row form>
-                    <Col md="6" >    
+                    <Col md="6">    
                         {
                             props.getList(props.listName).map(el=>{
                                 if(el.index==="1"){
@@ -22,8 +21,7 @@ const InputList= props =>(
                         {
                             props.getList(props.listName).map(el=>{
                                 if(el.index==="2"){
-
-                                    return <AppInput imgChange={props.imgChange} change={props.change} listName={props.listName} userInput={el.userInput}  key={el.id} min={el.min} max={el.max} id={el.id} type={el.type} />
+                                    return <AppInput change={props.change} listName={props.listName} userInput={el.userInput}  key={el.id} min={el.min} max={el.max} id={el.id} type={el.type} />
                                 }
                                 return null;
                             })
