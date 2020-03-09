@@ -44,7 +44,7 @@ const SignatureDisplay = (props)=>  {
                             {
                                 social.map((el,index)=>{
                                     if(el.userInput.length>0)
-                                    return  <a key={index} target="_blank"  rel="noopener noreferrer" className="mr-1 " href={el.userInput}><img style={socialStyle} alt="img-social"  src={require(`../../img/`+`${el.icon}`)}/></a>
+                                    return  <a key={index} target="_blank"  rel="noopener noreferrer" className="mr-1 " href={el.userInput}><img style={socialStyle} alt="img-social"  src={el.icon}/></a>
                                     else return null;
                                 })
                             }

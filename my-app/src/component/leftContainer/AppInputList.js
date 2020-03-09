@@ -12,7 +12,7 @@ const InputList= props =>(
                         {
                             props.getList(props.listName).map(el=>{
                                 if(el.index==="1"){
-                                    return <AppInput change={props.change} listName={props.listName} userInput={el.userInput}  key={el.id} min={el.min} max={el.max} id={el.id} type={el.type} />
+                                    return <AppInput imgChange={props.imgChange}  change={props.change} listName={props.listName} userInput={el.userInput}  key={el.id} min={el.min} max={el.max} id={el.id} type={el.type} />
                                 }
                                 return null;
                             })
@@ -23,7 +23,7 @@ const InputList= props =>(
                             props.getList(props.listName).map(el=>{
                                 if(el.index==="2"){
 
-                                    return <AppInput change={props.change} listName={props.listName} userInput={el.userInput}  key={el.id} min={el.min} max={el.max} id={el.id} type={el.type} />
+                                    return <AppInput imgChange={props.imgChange} change={props.change} listName={props.listName} userInput={el.userInput}  key={el.id} min={el.min} max={el.max} id={el.id} type={el.type} />
                                 }
                                 return null;
                             })

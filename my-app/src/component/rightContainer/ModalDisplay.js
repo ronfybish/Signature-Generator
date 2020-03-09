@@ -1,5 +1,6 @@
 import React from 'react';
 import SignatureDisplay from './SignatureDisplay'
+import ModalSignature from './ModalSignature'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, } from 'reactstrap';
 
 
@@ -9,8 +10,11 @@ const ModalDisplay= props =>(
             <Modal  isOpen={props.isOpen} toggle={props.toggle} >
                 <ModalHeader  toggle={props.toggle} ><p style={{color:"#8214B6"}} className="display-5">Just Copy And Paste!</p></ModalHeader>
                     <ModalBody>
-                            {/* <ModalSignature list={props.list}/> */}
-                            <SignatureDisplay list={props.list} />
+                        
+                            
+                            <ModalSignature list={props.list}/>
+                                {/* <SignatureDisplay list={props.list} /> */}
+                          
                     </ModalBody>
                     <ModalFooter >
                         <Button  onClick={props.toggle} style={{background:"#8214B6"}}>Cancel</Button>

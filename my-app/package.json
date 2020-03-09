@@ -8,14 +8,12 @@
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^4.4.1",
     "firebase": "^7.10.0",
-    "html-to-image": "^0.1.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
     "reactstrap": "^8.4.1",
-    "redux": "^4.0.5",
-    "video-react": "^0.14.1"
+    "redux": "^4.0.5"
   },
   "scripts": {
     "start": "react-scripts start",

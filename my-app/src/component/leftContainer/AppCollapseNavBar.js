@@ -41,7 +41,7 @@ export default class AppCollapseNavBar extends Component {
                 </ButtonGroup>
                 <Collapse isOpen={whosOpen.isOpen}>
                         <CardBody className="py-3">
-                            <AppInputList change={this.props.change} listName={whosOpen.name} getList={this.props.getList}/>
+                            <AppInputList imgChange={this.props.imgChange} change={this.props.change} listName={whosOpen.name} getList={this.props.getList}/>
                         </CardBody>
                 </Collapse>
                 </Card>

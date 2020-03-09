@@ -3,11 +3,13 @@ import { Container, Row, Col } from 'reactstrap';
 import {BrowserRouter as Router,Switch,Route,} from "react-router-dom";
 import AppNavBar from './component/AppNavBar'
 import AppHeading from './component/AppHeading'
-
+import {storage} from './services/firebase'
 import AppCollapseNavBar from './component/leftContainer/AppCollapseNavBar'
 import SignatureContainer from './component/rightContainer/SignatureContainer'
 import UserGuide from './component/UserGuide'
 import './App.css';
+
+
 
 class App extends Component {
   constructor(props){
@@ -24,7 +26,51 @@ class App extends Component {
     }
 
   }
-  
+
+  handleImageChange=(event,inputId,listName)=>{
+    if(event.target.files[0]){
+      this.setState({isChange:true})
+      const image=event.target.files[0];
+      const uploadTask=storage.ref(`images/${image.name}`).put(image);
+      uploadTask.on('state_changed',
+        (snapshot)=>{
+            //propgress
+        },
+        (error)=>{
+          console.log(error)
+        },
+        ()=>{
+          storage.ref('images').child(image.name).getDownloadURL().then(url=>{
+            let updateList=this.state[listName];
+            let updateObj=updateList.find(el=>el.id===inputId)
+            let index= updateList.findIndex(el=>el.id===inputId);
+            updateObj.userInput=url;
+            updateList[index]=updateObj;
+            console.log(url)
+            this.setState({listName:updateList})
+          })
+        }
+     )
+
+    }
+  }
+
+  componentDidMount()
+  { 
+    this.state.social.forEach((el)=>{
+      storage.ref(`social/${el.icon}`).getDownloadURL()
+      .then(url=>{
+        let updateList=this.state["social"];
+        let updateObj=updateList.find(ell=>ell.id===el.id)
+        let index= updateList.findIndex(ell=>ell.id===el.id)
+        updateObj.icon=url;
+        updateList[index]=updateObj;
+        this.setState({listName:updateList})
+      })
+      
+    })
+      
+  }
   toggleNavBar=()=>{
     this.setState({isOpenNavBar:!this.state.isOpenNavBar});
   }
@@ -43,21 +89,21 @@ class App extends Component {
     let updateObj=updateList.find(el=>el.id===inputId)
     let index= updateList.findIndex(el=>el.id===inputId);
     
-    if (event.target.files && event.target.files[0]) {
-      let reader = new FileReader();
-      reader.onload = (event) => {
-        updateObj.userInput=event.target.result;
-        updateList[index]=updateObj;
-        this.setState({listName:updateList})
-        console.log(updateObj);
-      };
-      reader.readAsDataURL(event.target.files[0]);
-    }
-    else{
+    // if (event.target.files && event.target.files[0]) {
+    //   let reader = new FileReader();
+    //   reader.onload = (event) => {
+    //     updateObj.userInput=event.target.result;
+    //     updateList[index]=updateObj;
+    //     this.setState({listName:updateList})
+    //     console.log(updateObj);
+    //   };
+    //   reader.readAsDataURL(event.target.files[0]);
+    // }
+    
       updateObj.userInput=event.target.value;
       updateList[index]=updateObj;
       this.setState({listName:updateList})
-    }
+    
       
   }
 
@@ -76,10 +122,10 @@ class App extends Component {
                 <Container>
                   <Row>
                     <Col md={{size:6,order:1}} lg={{size:6,order:1}}  xs={{order:2}} className="mb-2">
-                        <AppCollapseNavBar change={this.handleInputChange} getList={this.getList} ></AppCollapseNavBar>
+                        <AppCollapseNavBar imgChange={this.handleImageChange} change={this.handleInputChange} getList={this.getList} ></AppCollapseNavBar>
                     </Col>
                     <Col md={{size:6,order:2}}  lg={{size:6,order:2}} xs={{order:1}} >
-                      <SignatureContainer isChange={this.state.isChange}  isOpen={this.state.isOpenModal} toggle={this.toggleModal} list={this.state}/>
+                      <SignatureContainer  isChange={this.state.isChange}  isOpen={this.state.isOpenModal} toggle={this.toggleModal} list={this.state}/>
                     </Col>
                   </Row>
                 </Container>

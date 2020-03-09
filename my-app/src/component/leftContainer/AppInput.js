@@ -8,7 +8,7 @@ const AppInput= props =>(
         props.type==="file"?
                   <FormGroup >
                     <Label for={props.id}>{props.id} Image</Label>
-                    <CustomInput type="file" id={props.id} name="customFile" onChange={(event)=>props.change(event,props.id,props.listName)} label="Pick a file!" />
+                    <CustomInput type="file" id={props.id} name="customFile" onChange={(event)=>props.imgChange(event,props.id,props.listName)} label="Pick a file!" />
                 </FormGroup>
             :
             <FormGroup className="mr-2">
