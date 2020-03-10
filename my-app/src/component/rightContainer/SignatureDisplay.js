@@ -8,8 +8,8 @@ const SignatureDisplay = (props)=>  {
     const profile=images[1]
 
     const mainStyle={
-        border:"1px solid white",
-        borderColor:style[0].userInput,
+        border:"1px solid",
+        background:style[0].userInput,
         color:style[1].userInput,
         borderRadius:style[2].userInput+"px",
     }
@@ -37,7 +37,7 @@ const SignatureDisplay = (props)=>  {
                         <Col lg="3" xs="4"  className="align-self-center"> 
                             {
                                 logo.userInput.length>0?
-                                <div className="ml-2" ><img  alt="img-logo" style={logoStyle} src={logo.userInput}/></div>
+                                <div className="ml-3"style={{marginBottom:"4px"}} ><img  alt="img-logo" style={logoStyle} src={logo.userInput}/></div>
                                 :
                                 null                                       
                             }
