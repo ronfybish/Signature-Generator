@@ -9,7 +9,10 @@ const ModalDisplay= props =>(
             <Modal  isOpen={props.isOpen} toggle={props.toggle} >
                 <ModalHeader  toggle={props.toggle} ><p style={{color:"#8214B6"}} className="display-5">Just Copy And Paste!</p></ModalHeader>
                     <ModalBody>
+                        <div className="p-3" contentEditable={true}>
+
                                 <ModalSignature list={props.list}/>
+                        </div>
                     </ModalBody>
                     <ModalFooter >
                         <Button  onClick={props.toggle} style={{background:"#8214B6"}}>Cancel</Button>

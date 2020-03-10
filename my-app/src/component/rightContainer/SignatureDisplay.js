@@ -8,7 +8,8 @@ const SignatureDisplay = (props)=>  {
     const profile=images[1]
 
     const mainStyle={
-        backgroundColor:style[0].userInput,
+        border:"1px solid white",
+        borderColor:style[0].userInput,
         color:style[1].userInput,
         borderRadius:style[2].userInput+"px",
     }
@@ -58,8 +59,7 @@ const SignatureDisplay = (props)=>  {
                                     null
                                 }
                                 {
-                                    content.map((el,index)=>{
-                                    if(el.length===0)return null;
+                                    content.filter(el=>el.length!==0).map((el,index)=>{
                                     return <div style={contentStyle} key={index}>{el.userInput}</div>
                                     })
                                 }                           

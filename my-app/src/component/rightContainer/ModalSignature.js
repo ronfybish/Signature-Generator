@@ -8,16 +8,14 @@ const ModalSignature = (props)=>{
     const profile=images[1]
 
     const mainStyle={
-        backgroundColor:style[0].userInput,
-        color:style[1].userInput,
         borderRadius:style[2].userInput+"px",
-        fontSize:'16px',
+        color:style[1].userInput,
+        fontSize:'13px',
         
     }
     const contentStyle={
         paddingTop:style[3].userInput+"px",
         marginLeft:"7px"
-        
     }
     const logoStyle={
         width:style[4].userInput+"px",
@@ -41,9 +39,10 @@ const ModalSignature = (props)=>{
     };
 
     return(
-            <div style={mainStyle}>
-                <table>
-                  <tr>
+            <div>
+              <table style={mainStyle}>
+                <tbody >
+                  <tr style={{border:"1px solid black",borderColor:style[0].userInput,}} >
                     <td>
                         {
                             logo.userInput.length>0?
@@ -71,16 +70,15 @@ const ModalSignature = (props)=>{
                                 }
                 
                                 {
-                                content.map((el,index)=>{
-                                if(el.length===0)return null;
-                                return <div style={contentStyle} key={index}>{el.userInput}</div>
-                                })
+                                    content.filter(el=>el.length!==0).map((el,index)=>{
+                                    return <div style={contentStyle} key={index}>{el.userInput}</div>
+                                    })
                                 }
                             </div>
                         </td>
                     </tr>
-                </table>
-                 
+                </tbody>
+            </table>
         </div>
     )
 }
