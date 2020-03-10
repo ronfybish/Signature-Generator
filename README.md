@@ -24,6 +24,7 @@
 * Bootstrap 4
 * React-Router 5.1.2
 * Firebase Hosting
+* Firebase Storage
 * DNS, custom domain name from Goddady 
 * HTMl, CSS, JavaScript
 * UI/UX Figma 
