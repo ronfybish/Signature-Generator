@@ -14,10 +14,10 @@ const ModalSignature = (props)=>{
         background:style[0].userInput,
         color:style[1].userInput,
         fontSize:'14px',
-        paddingTop:"10px",
-        paddingBottom:"10px",
-        paddingLeft:"35px",
-        paddingRight:"35px"
+        paddingTop:"6px",
+        paddingBottom:"6px",
+        paddingLeft:"25px",
+        paddingRight:"60px"
     }
 
     const contentStyle={
@@ -46,7 +46,7 @@ const ModalSignature = (props)=>{
     };
 
     return(
-            <div>
+            <div onClick={props.onClick} >
               <table style={mainStyle}>
                 <tbody>
                   <tr>
@@ -57,13 +57,15 @@ const ModalSignature = (props)=>{
                             :
                             null                                       
                         }
+                        
                         {
                             social.map((el,index)=>{
                                 if(el.userInput.length>0)
-                                return  <a key={index} target="_blank"  rel="noopener noreferrer"  href={el.userInput}><img style={socialStyle} alt="img-social"  src={el.icon}/></a>
+                                return  <a key={index} target="_blank" rel="noopener noreferrer" href={el.userInput}><img style={socialStyle} alt="img-social"  src={el.icon}/></a>
                                 else return null;
                             })
                         }
+                        
                         </td>
                         <td >
                             <div style={{borderLeftColor:style[1].userInput,borderLeftStyle:'solid',marginLeft:"4px",paddingLeft:"3px"}} >

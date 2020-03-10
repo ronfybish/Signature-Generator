@@ -51,6 +51,11 @@ class App extends Component {
     }
   }
 
+  copy_to_clipboard=(id)=>{
+    document.getElementById('html').select();
+    document.execCommand('copy');
+  } 
+
   componentDidMount(){ 
     this.state.social.forEach((el)=>{
       storage.ref(`social/${el.icon}`).getDownloadURL()
@@ -108,7 +113,7 @@ class App extends Component {
                         <AppCollapseNavBar imgChange={this.handleImageChange} change={this.handleInputChange} getList={this.getList} ></AppCollapseNavBar>
                     </Col>
                     <Col md={{size:6,order:2}}  lg={{size:6,order:2}} xs={{order:1}} >
-                      <SignatureContainer   isChange={this.state.isChange}  isOpen={this.state.isOpenModal} toggle={this.toggleModal} list={this.state}/>
+                      <SignatureContainer  isChange={this.state.isChange}  isOpen={this.state.isOpenModal} toggle={this.toggleModal} list={this.state}/>
                     </Col>
                   </Row>
                 </Container>
