@@ -11,13 +11,26 @@
 
 ## Table of contents
 * [General info](#general-info)
+* [User Stories](#User-Stories)
 * [Technologies](#technologies)
 * [Contact](#contact)
 
+
+
 ## General info
-1. Create free tool to genarte Digital Email Signature
-2. Online Tool
-3. Increase your business value
+### 1. easy-to-use email signature generator
+### 2. Online free Tool
+### 3. Increase your brand awareness
+
+
+
+## User Stories
+-   [ ] User can create email Signature in 60 seconds.
+-   [ ] User can create signatures from any device.
+-   [ ] User can add social media links.
+-   [ ] User can design and style 
+-   [ ] User can copy & paste to his email accoun
+
 
 ## Technologies
 * React-strap 8.4.1
