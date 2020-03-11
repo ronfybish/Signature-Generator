@@ -9,7 +9,7 @@ import SignatureContainer from './component/rightContainer/SignatureContainer'
 import UserGuide from './component/UserGuide'
 import './App.css';
 
-
+import SignatureDisplay from './component/rightContainer/SignatureDisplay'
 
 class App extends Component {
   constructor(props){
@@ -105,10 +105,10 @@ class App extends Component {
                 <AppHeading/>
                 <Container>
                   <Row>
-                    <Col md={{size:6,order:1}} lg={{size:6,order:1}}  xs={{order:2}} className="mb-2">
+                    <Col   className="mb-2">
                         <AppCollapseNavBar imgChange={this.handleImageChange} change={this.handleInputChange} getList={this.getList} ></AppCollapseNavBar>
                     </Col>
-                    <Col md={{size:6,order:2}}  lg={{size:6,order:2}} xs={{order:1}} >
+                    <Col  >
                       <SignatureContainer  isChange={this.state.isChange}  isOpen={this.state.isOpenModal} toggle={this.toggleModal} list={this.state}/>
                     </Col>
                   </Row>
