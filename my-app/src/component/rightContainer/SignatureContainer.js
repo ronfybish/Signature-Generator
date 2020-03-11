@@ -27,7 +27,7 @@ const SignatureContainer= (props) =>{
                                         <div className="mb-2 ml-1"><img alt="signature-example" src={require('../../img/signature.png')}/></div>
                                         <div>
                                             <a href='https://www.facebook.com/fybish'><img alt='icon-facebook' src={require('./../../img/facebook.png')}/></a>
-                                            <a href='https://www.instagram.com/ron_fybish/' className="mx-1"><img alt='icon-instagram' src={require('./../../img/instagram.png')}/></a>
+                                            <a href='https://www.instagram.com/ron_fybish/' className="mx-1 "><img  alt='icon-instagram' src={require('./../../img/instagram.png')}/></a>
                                             <a href='https://www.linkedin.com/in/ron-fybish-9b0194157/'><img alt='icon-linkedin' src={require('./../../img/linkedin.png')}/></a>
                                         </div>
                                     </div>
@@ -48,26 +48,3 @@ const SignatureContainer= (props) =>{
 
 export default SignatureContainer;
 
- {/* {
-                                    props.isChange?
-                                    <SignatureDisplay list={props.list}/>
-                                    :
-                                    <div>
-                                        <img className="mt-3 mb-3" alt="signature-example-img" style={{maxWidth:"280px"}} src={require('../../img/‏‏ll.JPG')}/>
-                                    </div>
-                                        
-                                } */}
-
-
-
-                                {/* <div className="border d-flex flex-column rounded">
-                            <div className="d-flex rounded p-2" style={{background:"#B7B3B7"}}>
-                                <div className="pl-2 mr-auto text-white">New Message</div>
-                                <div className="text-white">x</div>
-                            </div>
-                            <div className="mb-2 pl-2 pt-2 text-muted border-muted border-bottom">To:</div>
-                            <div className="border-muted pl-2 text-muted border-bottom">Subject:</div>
-                                        <p>Dear Mr. User</p>
-                                        <p>Thank you for taking the time to create your signature.<br/> I look forward to hearing from you!</p>
-                                        <p>Sincerely,<br/> Ron Fybish</p>
-                        </div>   */}

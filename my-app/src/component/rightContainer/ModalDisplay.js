@@ -30,7 +30,7 @@ class ModalDisplay extends Component {
     render(){
         return(
             <div>
-                <Button style={{background:"#8214B6"}} className="mb-5 mt-2 btn-block rounded-pill" onClick={this.props.toggle}>Generate Signature</Button>
+                <Button style={{background:"#8214B6"}} className="mb-5 mt-4 btn-block rounded-pill" onClick={this.props.toggle}>Generate Signature</Button>
                     <Modal  isOpen={this.props.isOpen} toggle={this.props.toggle} >
                     <ModalHeader toggle={this.props.toggle} className="p-2 m-0 ml-2" ><img alt="modal-logo" src={require('./../../img/modal_logo.png')}/></ModalHeader>
                             {this.state.isCopied?
