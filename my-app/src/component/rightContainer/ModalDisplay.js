@@ -1,7 +1,7 @@
 import React from 'react';
 // import ModalSignature from './ModalSignature'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, } from 'reactstrap';
-import ModalSignature from './ModalSignature'
+import SignatureDisplay from  './SignatureDisplay'
 import {Link} from 'react-router-dom'
 const ModalDisplay= props =>(
     <div>
@@ -10,14 +10,13 @@ const ModalDisplay= props =>(
             <ModalHeader toggle={props.toggle} className="p-2 m-0" style={{background:"#8214B6",color:"white"}}>Just Copy & Paste!</ModalHeader>
                 <ModalBody className="mx-auto">
                     <div contentEditable={true}>
-                        <ModalSignature list={props.list} />
+                        <SignatureDisplay list={props.list} />
                     </div>
                 </ModalBody>
                 <ModalFooter >
                     <div className="mx-auto">
                     <Link to="/guide"><Button style={{background:"#8214B6"}}  onClick={props.toggle}>User Guide</Button>{' '}</Link>
                     <Button  style={{color:"#8214B6"}} outline  onClick={props.toggle}>Cancel</Button>
-
                     </div>
                 </ModalFooter>
             </Modal>                   

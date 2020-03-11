@@ -1,8 +1,7 @@
 import React from 'react';
-import SignatureDisplay from './SignatureDisplay'
 import ModalDisplay from './ModalDisplay'
-import { Card, CardBody, CardHeader,CardTitle} from 'reactstrap';
-import ModalSignature from './ModalSignature'
+import SignatureDisplay from './SignatureDisplay'
+import { Card, CardBody, CardHeader,} from 'reactstrap';
 
 const SignatureContainer= (props) =>{
     return(
@@ -25,12 +24,12 @@ const SignatureContainer= (props) =>{
                             <p className='pl-2 font-italic'>Dear Mr. User</p>
                             <p className='pl-2 font-italic'>Thank you for taking the time to create your signature.<br/> I look forward to hearing from you!</p>
                             <p className='pl-2 font-italic'>Sincerely,<br/> Ron Fybish</p>
-                            <ModalSignature list={props.list} /><br/>    
+                            <SignatureDisplay list={props.list} /><br/>    
                     </CardBody>
                 </Card>
                     <ModalDisplay  list={props.list}  toggle={props.toggle} isOpen={props.isOpen}/>
             </div>
-            )
+    )
 }
 
 export default SignatureContainer;
