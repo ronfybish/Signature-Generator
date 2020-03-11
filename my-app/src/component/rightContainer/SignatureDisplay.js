@@ -16,7 +16,7 @@ const SignatureDisplay = (props)=>{
         fontSize:'14px',
         paddingTop:"6px",
         paddingBottom:"6px",
-        paddingLeft:"25px",
+        paddingLeft:"15px",
         paddingRight:"60px"
     }
 
@@ -28,7 +28,7 @@ const SignatureDisplay = (props)=>{
         width:style[4].userInput+"px",
         height:style[4].userInput+"px",
         borderRadius:style[5].userInput+"px",
-        
+        marginBottom:"10px"
     }
     const profileStyle={
         width:style[6].userInput+"px",
@@ -42,7 +42,8 @@ const SignatureDisplay = (props)=>{
         height:style[8].userInput+"px",
         borderRadius:style[9].userInput+"px",
         marginLeft:"1px",
-        marginRight:"1px"
+        marginRight:"1px",
+       
     };
 
     return(
@@ -53,11 +54,11 @@ const SignatureDisplay = (props)=>{
                     <td>
                         {
                             logo.userInput.length>0?
-                            <div style={{marginBottom:"4px",textAlign:"center"}}><img  alt="img-logo" style={logoStyle} src={logo.userInput}/></div>
+                            <div className="d-flex justify-content-center" style={{marginBottom:"4px"}}><img  alt="img-logo" style={logoStyle} src={logo.userInput}/></div>
                             :
                             null                                       
                         }
-                        
+                        <div className="d-flex justify-content-center">
                         {
                             social.map((el,index)=>{
                                 if(el.userInput.length>0)
@@ -65,10 +66,10 @@ const SignatureDisplay = (props)=>{
                                 else return null;
                             })
                         }
-                        
+                        </div>
                         </td>
                         <td >
-                            <div style={{borderLeftColor:style[1].userInput,borderLeftStyle:'solid',marginLeft:"4px",paddingLeft:"3px"}} >
+                            <div style={{borderLeftColor:style[1].userInput,borderLeftStyle:'solid',marginLeft:"4px",paddingLeft:"12px"}} >
                                 {
                                     profile.userInput.length>0?
                                     

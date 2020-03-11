@@ -9,15 +9,14 @@ import SignatureContainer from './component/rightContainer/SignatureContainer'
 import UserGuide from './component/UserGuide'
 import './App.css';
 
-import SignatureDisplay from './component/rightContainer/SignatureDisplay'
 
 class App extends Component {
   constructor(props){
     super(props)
 
     this.state={
-      content:[{index:"1",id:'Full Name',type:"text",userInput:'Ron Fybish',min:"20",max:"40"},{index:"2",id:'Role',type:"text",userInput:'Front End Developer',min:"20",max:"40"},{index:"1",id:'Email',type:"text",userInput:'fybishron@gmail.com',min:"20",max:"40"},{index:"2",id:'Phone',type:"text",userInput:'052-6623435',min:"0",max:"0"},{index:"1",id:'Address',type:"text",userInput:'',min:"0",max:"0"},{index:"2",id:'Website',type:"text",userInput:'www.just-sign.com',min:"0",max:"0"}],
-      social:[{index:"1",id:'FaceBook',userInput:'1',type:"text",min:"20",max:"30",icon:'facebook.png'},{index:"2",id:'Instagram',type:"text",userInput:'1',min:"20",max:"30",icon:'instagram.png'},{index:"1",id:'Twitter',type:"text",userInput:'',min:"20",max:"30",icon:'twitter.png'},{index:"2",id:'Linkedin',type:"text",userInput:'1',min:"20",max:"30",icon:'linkedin.png'}],
+      content:[{index:"1",id:'Full Name',type:"text",userInput:'',min:"20",max:"40"},{index:"2",id:'Role',type:"text",userInput:'',min:"20",max:"40"},{index:"1",id:'Email',type:"text",userInput:'',min:"20",max:"40"},{index:"2",id:'Phone',type:"text",userInput:'',min:"0",max:"0"},{index:"1",id:'Address',type:"text",userInput:'',min:"0",max:"0"},{index:"2",id:'Website',type:"text",userInput:'',min:"0",max:"0"}],
+      social:[{index:"1",id:'FaceBook',userInput:'',type:"text",min:"20",max:"30",icon:'facebook.png'},{index:"2",id:'Instagram',type:"text",userInput:'',min:"20",max:"30",icon:'instagram.png'},{index:"1",id:'Twitter',type:"text",userInput:'',min:"20",max:"30",icon:'twitter.png'},{index:"2",id:'Linkedin',type:"text",userInput:'',min:"20",max:"30",icon:'linkedin.png'}],
       images:[{index:"1",id:"Logo",type:'file',userInput:'',min:"35",max:"60"},{index:"1",id:"Profile",type:'file',userInput:'',min:"35",max:"60"}],
       style:[{index:"1",id:"Background Color",userInput:'',type:'color',min:"20",max:"40"},{index:"1",id:"Text Color",userInput:'',type:'color',min:"20",max:"40"},{index:"2",id:"Background Rounding",userInput:'0',type:'range',min:"0",max:"35"},{index:"2",id:"Row Spacing",userInput:'2',type:'range',min:"2",max:"5"},{index:"1",id:"Logo Size",userInput:'65',type:'range',min:"65",max:"80"},{index:"2",id:"Logo Image Rounding",userInput:'0',type:'range',min:"20",max:"40"},{index:"1",id:"Profile Image Size",userInput:'55',type:'range',min:"55",max:"61"},{index:"2",id:"Profile Image Rounding",userInput:'0',type:'range',min:"0",max:"40"},{index:"1",id:"Social Size",userInput:'20',type:'range',min:"20",max:"22"},{index:"2",id:"Social Rounding",userInput:'0',type:'range',min:"0",max:"30"}],
       isOpenNavBar:false,
@@ -30,7 +29,7 @@ class App extends Component {
 
   handleImageChange=(event,inputId,listName)=>{
     if(event.target.files[0]){
-      // this.setState({isChange:true})
+      this.setState({isChange:true})
       const image=event.target.files[0];
       const uploadTask=storage.ref(`images/${image.name}`).put(image);
       uploadTask.on('state_changed',
@@ -81,7 +80,7 @@ class App extends Component {
   }
 
   handleInputChange = (event,inputId,listName) =>{
-    // this.setState({isChange:true})
+    this.setState({isChange:true})
     event.preventDefault();
     let updateList=this.state[listName];
     let updateObj=updateList.find(el=>el.id===inputId)
