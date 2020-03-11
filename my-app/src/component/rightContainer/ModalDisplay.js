@@ -1,14 +1,32 @@
 import React from 'react';
 // import ModalSignature from './ModalSignature'
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter,Alert } from 'reactstrap';
-import {Link} from 'react-router-dom'
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, } from 'reactstrap';
 import ModalSignature from './ModalSignature'
-
+import {Link} from 'react-router-dom'
 const ModalDisplay= props =>(
     <div>
         <Button style={{background:"#8214B6"}} className="mb-5 mt-2 btn-block rounded-pill" onClick={props.toggle}>Create Signature</Button>
             <Modal  isOpen={props.isOpen} toggle={props.toggle} >
-                <ModalHeader  toggle={props.toggle} ><img src={require('../../img/logo.png')}/></ModalHeader>
+            <ModalHeader toggle={props.toggle} className="p-2 m-0" style={{background:"#8214B6",color:"white"}}>Just Copy & Paste!</ModalHeader>
+                <ModalBody className="mx-auto">
+                    <div contentEditable={true}>
+                        <ModalSignature list={props.list} />
+                    </div>
+                </ModalBody>
+                <ModalFooter >
+                    <div className="mx-auto">
+                    <Link to="/guide"><Button style={{background:"#8214B6"}}  onClick={props.toggle}>User Guide</Button>{' '}</Link>
+                    <Button  style={{color:"#8214B6"}} outline  onClick={props.toggle}>Cancel</Button>
+
+                    </div>
+                </ModalFooter>
+            </Modal>                   
+    </div>
+)
+
+export default ModalDisplay;
+
+{/* <ModalHeader  toggle={props.toggle} ><img src={require('../../img/logo.png')}/></ModalHeader>
                     <ModalBody>
                         <Alert className="m-0" style={{backgroundColor:"#8214B6",opacity:"0.8",color:"black"}} >
                             <h4  className="alert-heading">Well done!</h4>
@@ -25,9 +43,4 @@ const ModalDisplay= props =>(
                     </ModalBody>
                     <ModalFooter  >
                         <Link className="mx-auto px-5" to="/guide"><Button  onClick={props.toggle}  style={{backgroundColor:"#8214B6"}}>How do I add my new email signature?</Button></Link>
-                    </ModalFooter>
-            </Modal>                   
-    </div>
-)
-
-export default ModalDisplay;
+                    </ModalFooter> */}
