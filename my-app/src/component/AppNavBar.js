@@ -8,6 +8,7 @@ export default class AppNavBar extends Component {
             <Navbar color="light" className="mb-3" light>
               <NavbarBrand href="/" >
                       <img alt="logo-img" src={require('../img/logo.png')} />
+                      
               </NavbarBrand>
               <NavbarToggler onClick={this.props.toggle}  />
               <Collapse isOpen={this.props.isOpen} navbar>
