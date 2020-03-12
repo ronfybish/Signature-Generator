@@ -27,7 +27,7 @@ const SignatureContainer= (props) =>{
                                         <div className="mb-2 ml-1"><img alt="signature-example" src={require('../../img/signature.png')}/></div>
                                         <div>
                                             <a href='https://www.facebook.com/fybish'><img alt='icon-facebook' src={require('./../../img/facebook.png')}/></a>
-                                            <a href='https://www.instagram.com/ron_fybish/' className="mx-1 "><img  alt='icon-instagram' src={require('./../../img/instagram.png')}/></a>
+                                            <a href='https://www.instagram.com/ron_fybish/' className="mx-1 "><img cd mbnpm start alt='icon-instagram' src={require('./../../img/instagram.png')}/></a>
                                             <a href='https://www.linkedin.com/in/ron-fybish-9b0194157/'><img alt='icon-linkedin' src={require('./../../img/linkedin.png')}/></a>
                                         </div>
                                     </div>
