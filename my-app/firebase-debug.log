@@ -1,0 +1,17 @@
+[debug] [2020-03-18T19:34:27.122Z] ----------------------------------------------------------------------
+[debug] [2020-03-18T19:34:27.124Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\RON\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js open
+[debug] [2020-03-18T19:34:27.125Z] CLI Version:   7.14.0
+[debug] [2020-03-18T19:34:27.125Z] Platform:      win32
+[debug] [2020-03-18T19:34:27.125Z] Node Version:  v10.16.3
+[debug] [2020-03-18T19:34:27.125Z] Time:          Wed Mar 18 2020 21:34:27 GMT+0200 (GMT+02:00)
+[debug] [2020-03-18T19:34:27.126Z] ----------------------------------------------------------------------
+[debug] [2020-03-18T19:34:27.126Z] 
+[debug] [2020-03-18T19:34:27.132Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-03-18T19:34:27.132Z] > authorizing via signed-in user
+[debug] [2020-03-18T19:34:27.133Z] [iam] checking project signautre-c6699 for permissions ["firebase.projects.get"]
+[debug] [2020-03-18T19:34:27.135Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/signautre-c6699:testIamPermissions  
+
+[debug] [2020-03-18T19:34:28.097Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-18T19:34:28.099Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/signautre-c6699  
+ 
+[debug] [2020-03-18T19:34:28.572Z] <<< HTTP RESPONSE 200
