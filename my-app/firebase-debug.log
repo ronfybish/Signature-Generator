@@ -15,3 +15,9 @@
 [debug] [2020-03-18T19:34:28.099Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/signautre-c6699  
  
 [debug] [2020-03-18T19:34:28.572Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-18T19:36:34.449Z] Error: kill ENOSYS
+    at process.kill (internal/process/per_thread.js:198:13)
+    at process.listener (C:\Users\RON\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\signal-exit\index.js:95:15)
+    at process.emit (events.js:198:13)
+[error] 
+[error] Error: An unexpected error has occurred.
