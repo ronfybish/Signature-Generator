@@ -4,6 +4,9 @@ import SignatureDisplay from './SignatureDisplay'
 import { Card, CardBody} from 'reactstrap';
 
 const SignatureContainer= (props) =>{
+    const stylea={
+        borderRadius:'12px'
+    }
     return(
             <div>
                 <Card className="border rounded mb-2 ">
@@ -24,11 +27,11 @@ const SignatureContainer= (props) =>{
                                 :
                                 <div className='d-inline-flex p-3 m-2 mb-3' style={{color:"#8214B6",border:"1px solid",borderRadius:"8px"}}>
                                     <div className="d-flex flex-column mr-2 ">
-                                        <div className="mb-2 ml-1"><img alt="signature-example" src={require('../../img/signature.png')}/></div>
-                                        <div>
-                                            <a href='https://www.facebook.com/fybish'><img alt='icon-facebook' src={require('./../../img/facebook.png')}/></a>
-                                            <a href='https://www.instagram.com/ron_fybish/' className="mx-1 "><img cd mbnpm start alt='icon-instagram' src={require('./../../img/instagram.png')}/></a>
-                                            <a href='https://www.linkedin.com/in/ron-fybish-9b0194157/'><img alt='icon-linkedin' src={require('./../../img/linkedin.png')}/></a>
+                                        <div  className="mb-2 ml-2"><img width='55px' alt="signature-example" src={require('../../img/test1.png')}/></div>
+                                        <div >
+                                            <a  href='https://www.facebook.com/fybish' target="_blank"><img width='24px'  alt='icon-facebook' src={require('./../../img/iconfinder_social-facebook-2019-circle_4696483.png')}/></a>
+                                            <a href='https://twitter.com/Ron_Fybish' target="_blank" className="mx-1"><img alt='icon-twiter' src={require('./../../img/twitter (1).png')}/></a>
+                                            <a href='https://www.linkedin.com/in/ron-fybish-9b0194157/'  target="_blank" ><img alt='icon-linkedin' src={require('./../../img/linkedin (2).png')}/></a>
                                         </div>
                                     </div>
                                     <div className="pl-3" style={{borderLeft:"2px solid",borderColor:"#8214B6"}}>
