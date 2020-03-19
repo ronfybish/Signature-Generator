@@ -5,7 +5,7 @@ export default class UserGuide extends Component {
     render() {
         return (
             <div>
-                <Jumbotron className="text-center mb-5">
+                <Jumbotron className="text-center mb-5 ">
                     <h1 className="display-3" style={{color:"#8214B6"}}>User Guide</h1>
                     <h3>How to Add Your Email Signature</h3>
                     <p>(Gmail, Apple, Outlook and more)</p>

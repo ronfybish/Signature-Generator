@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 export default class AppNavBar extends Component {    
     render() {
         return (
-        <div>
+        <div >
             <Navbar color="light" className="mb-3" light>
               <NavbarBrand href="/" >
                       <img alt="logo-img" src={require('../img/logo.png')} />
@@ -14,13 +14,15 @@ export default class AppNavBar extends Component {
               <Collapse isOpen={this.props.isOpen} navbar>
                 <Nav className="text-center" navbar>
                   <NavItem>
-                    <Link to="/guide"><div><strong>User Guide</strong></div></Link>
+                    <Link to="/guide"><div className='my-2'><strong>User Guide</strong></div></Link>
                   </NavItem>
                   <NavItem>
-                    <NavLink target="_blank" href="https://github.com/ronfybish/Signature-Generator"><strong>My GitHub</strong></NavLink>
+                    <NavLink target="_blank" rel="noopener noreferrer" href="https://github.com/ronfybish/Signature-Generator"><strong>My GitHub</strong></NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink target="_blank" href="https://www.linkedin.com/in/ron-fybish-9b0194157/"><strong>Linkedin Profile</strong></NavLink>
+                    <NavLink target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ron-fybish-9b0194157/"><strong>Linkedin Profile</strong>
+                    
+                    </NavLink>
                   </NavItem>
                 </Nav>
               </Collapse>

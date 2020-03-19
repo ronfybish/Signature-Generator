@@ -30,7 +30,7 @@ class ModalDisplay extends Component {
     render(){
         return(
             <div>
-                <Button style={{background:"#8214B6"}} className="mb-5 mt-4 btn-block rounded-pill" onClick={this.props.toggle}>Generate Signature</Button>
+                <Button style={{background:"#8214B6"}} className="mb-5 mt-2 btn-block rounded-pill" onClick={this.props.toggle}>Generate Signature</Button>
                     <Modal  isOpen={this.props.isOpen} toggle={this.props.toggle} >
                     <ModalHeader toggle={this.props.toggle} className="p-2 m-0 ml-2" ><img alt="modal-logo" src={require('./../../img/modal_logo.png')}/></ModalHeader>
                             {this.state.isCopied?
@@ -38,7 +38,7 @@ class ModalDisplay extends Component {
                                     <h4 className="alert-heading">Copied !</h4>
                                     <p >all that’s left is to embed it in your email !</p>
                                     <hr />
-                                    <Link to="/guide"><Button className="rounded-pill">How To Add Signature To Email</Button></Link>
+                                    <Link to="/guide"><Button className="rounded-pill ml-3">How To Add Signature To Email ?</Button></Link>
                                 </Alert>
                                 :
                                 null
@@ -66,11 +66,11 @@ class ModalDisplay extends Component {
                             {
                             this.props.isChange?
                             <div className='mx-auto'>
-                                <Button className="rounded-pill pl-5 pr-5" onClick={(event)=>this.handleCopy(event)}>Copy Signature</Button>{' '}
+                                <Button className="rounded-pill pl-5 pr-5" style={{background:"#8214B6"}} onClick={(event)=>this.handleCopy(event)}>Copy Signature</Button>{' '}
                             </div>
                             :
                             <div className='mx-auto'>
-                                <Button className="rounded-pill pl-5 pr-5" onClick={this.props.toggle} >Start Edit</Button>
+                                <Button className="rounded-pill pl-5 pr-5" style={{background:"#8214B6"}} onClick={this.props.toggle} >Start Edit</Button>
                             </div>
 
                         }
