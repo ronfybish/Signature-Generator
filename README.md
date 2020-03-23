@@ -5,8 +5,8 @@
 >*[www.just-sign.com](https://www.just-sign.com)*
 
 
-![](guides.gif)
-[]('./gif.gif')
+![](gif.gif)
+<!-- []('./gif.gif') -->
 ---
 
 
