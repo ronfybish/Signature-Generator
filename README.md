@@ -18,9 +18,9 @@
 
 
 ## General info
-### 1. easy-to-use email signature generator
-### 2. Online free Tool
-### 3. Increase your brand awareness
+### 1. Easy-to-use email signature generator.
+### 2. Online free Tool.
+### 3. Increase your brand awareness.
 ## 
 
 
@@ -30,19 +30,19 @@
 -   [ ] User can create email Signature in 60 seconds.
 -   [ ] User can create signatures from any device.
 -   [ ] User can add social media links.
--   [ ] User can design and style 
--   [ ] User can copy & paste to his email accoun
+-   [ ] User can design and style .
+-   [ ] User can copy & paste to his email accoun.
 
 
 ## Technologies
 * React-strap 8.4.1
 * Bootstrap 4
 * React-Router 5.1.2
-* Firebase Hosting
-* Firebase Storage
-* DNS, custom domain name from Goddady 
-* HTMl, CSS, JavaScript
-* UI/UX Figma 
+* Firebase Hosting.
+* Firebase Storage.
+* DNS, custom domain name from Goddady. 
+* HTMl, CSS, JavaScript.
+* UI/UX Figma.
 
 
 ## Contact
