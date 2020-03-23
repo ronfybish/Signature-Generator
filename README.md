@@ -5,7 +5,7 @@
 >*[www.just-sign.com](https://www.just-sign.com)*
 
 
-![](signature.gif)
+![](guides.gif)
 ---
 
 
