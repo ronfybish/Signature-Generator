@@ -10,10 +10,9 @@ export default class AppJumbotron extends Component {
                 <p className="lead clearfix text-center pt-3">Use this to make your custom and ready-to-use email signature for your professional use.<br/>
                 Just create your signature, and copy & paste to your email account
                 </p>
-                {/* <p className="text-center">
-                  <a href="https://www.producthunt.com/posts/just-sign?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-just-sign" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=187673&theme=light"  alt="Just Sign-Create your free email signature in less then 60 seconds !"/></a>
-                  </p> */}
-                
+                <p className='text-center'>
+                <a href="https://www.producthunt.com/posts/just-sign-2?utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-just-sign-2" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=189309&theme=light&period=daily" alt="Just Sign - Build your email signature in less than 60 seconds | Product Hunt Embed" style={{width:"250px", height: "54px"}} width="250px" height="54px" /></a>
+                </p>
               </Container>
           </div>
         )
