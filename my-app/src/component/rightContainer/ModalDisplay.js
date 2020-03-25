@@ -21,9 +21,10 @@ class ModalDisplay extends Component {
         copyBoxElement.focus();
         document.execCommand('selectAll');
         document.execCommand('copy');
+        // console.log(document.execCommand('paste'));
         copyBoxElement.contentEditable = false;
-        getSelection().empty();
         this.handleIsCopied();
+        getSelection().empty();
         };
 
     copyBoxRef = React.createRef();
