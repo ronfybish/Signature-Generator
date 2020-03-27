@@ -97,7 +97,7 @@ class App extends Component {
         <div className="App">
           <AppNavBar toggle={this.toggleNavBar} isOpen={this.state.isOpenNavBar}></AppNavBar>
           <Switch>
-              <Route  path="/guide">
+              <Route path="/guide">
                 <UserGuide/>
               </Route>
               <Route path="/">
