@@ -6,7 +6,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.1",
     "@testing-library/user-event": "^7.2.1",
-    "bootstrap": "^4.4.1",
+    "bootstrap": "^4.6.1",
     "firebase": "^7.10.0",
     "react": "^16.13.0",
     "react-copy-to-clipboard": "^5.0.2",
